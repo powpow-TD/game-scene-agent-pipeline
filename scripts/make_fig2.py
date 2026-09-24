@@ -11,13 +11,13 @@ OUT = os.path.dirname(os.path.abspath(__file__))
 OI = {"orange":"#E69F00","skyblue":"#56B4E9","green":"#009E73","yellow":"#F0E442",
       "blue":"#0072B2","vermillion":"#D55E00","purple":"#CC79A7","grey":"#999999"}
 
-def box(ax,x,y,w,h,text,fc,ec="black",fs=8.5,bold=False,tc="black",ls="-"):
+def box(ax,x,y,w,h,text,fc,ec="black",fs=8.5,bold=False,tc="black",ls="-",linespacing=1.4):
     ax.add_patch(FancyBboxPatch((x,y),w,h,boxstyle="round,pad=0.005,rounding_size=0.015",
         fc=fc,ec=ec,lw=1.1,ls=ls,zorder=2))
     ax.text(x+w/2,y+h/2,text,ha="center",va="center",fontsize=fs,
             fontweight="bold" if bold else "normal",
             fontfamily="Microsoft YaHei" if bold else None,
-            color=tc,zorder=3,linespacing=1.4)
+            color=tc,zorder=3,linespacing=linespacing)
 def arrow(ax,p1,p2,color="black",lw=1.3,ls="-",rad=0.0,z=1):
     ax.add_patch(FancyArrowPatch(p1,p2,arrowstyle="-|>",mutation_scale=11,lw=lw,color=color,
         linestyle=ls,zorder=z,connectionstyle=f"arc3,rad={rad}",shrinkA=1,shrinkB=1))
@@ -38,13 +38,13 @@ arrow(ax,(0.26,0.505),(0.38,0.52),color=OI["orange"],lw=1.5)
 arrow(ax,(0.26,0.225),(0.38,0.40),color=OI["purple"],lw=1.5,rad=0.12)
 
 # 输出快照
-box(ax,0.70,0.24,0.28,0.52,
+box(ax,0.70,0.205,0.28,0.575,
     "结构化全局状态快照\n\n{\n  scene: …\n  objects[]\n    {id, type,\n     position_norm,\n     physics}\n  relations[]\n  hierarchy\n  lighting\n  physics_missing[]\n}",
-    "#FFFFFF",fs=7.6,ec="black")
+    "#FFFFFF",fs=7.4,ec="black",linespacing=1.22)
 arrow(ax,(0.62,0.50),(0.70,0.50),color=OI["green"],lw=1.8)
 ax.text(0.66,0.535,"融合",fontsize=7.5,color=OI["green"],ha="center")
 # 回写（虚线走快照框正下方空白区，文字横排置于箭头下方，避免与箭头/快照框重叠）
-arrow(ax,(0.84,0.24),(0.84,0.115),color=OI["green"],lw=1.3,ls="--")
+arrow(ax,(0.84,0.205),(0.84,0.115),color=OI["green"],lw=1.3,ls="--")
 ax.text(0.84,0.055,"UE5 场景图回读更新",fontsize=7.2,color=OI["green"],ha="center",va="center")
 
 plt.subplots_adjust(left=0.01,right=0.99,top=0.93,bottom=0.03)
