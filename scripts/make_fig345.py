@@ -181,7 +181,7 @@ print("fig4 done（lollipop）")
 
 # ============================================================ 图 5 任务依赖性
 fig, ax = plt.subplots(figsize=(5.2, 3.4), constrained_layout=True)
-fig.get_layout_engine().set(rect=(0.014, 0.024, 0.972, 0.952))
+fig.get_layout_engine().set(rect=(0.014, 0.116, 0.972, 0.860))
 scenes = ["living_room", "basketball_court", "beach_sea"]
 snames = ["室内客厅", "户外篮球场", "沙滩与大海"]
 rs = np.random.RandomState(7)
@@ -195,10 +195,10 @@ for si, sc in enumerate(scenes):
         m = st.mean(v)
         ax.plot([si + off - 0.10, si + off + 0.10], [m, m], color="black", lw=1.8, zorder=4)
     d = st.mean(vals_scene(sc, "B2", "M2_recall")) - st.mean(vals_scene(sc, "B2A2", "M2_recall"))
-    ax.text(si, 1.16, f"Δ={d:+.2f}", ha="center", fontsize=8.5,
+    ax.text(si, 1.13, f"Δ={d:+.2f}", ha="center", fontsize=8.5,
             color=OI["vermillion"], fontweight="bold", fontfamily="Microsoft YaHei")
 ax.set_xticks(range(3)); ax.set_xticklabels(snames, fontsize=9.5)
-ax.set_ylabel("目标物体覆盖率", fontsize=10); ax.set_ylim(0, 1.30)
+ax.set_ylabel("目标物体覆盖率", fontsize=10); ax.set_ylim(0, 1.24)
 ax.set_yticks([0, 0.2, 0.4, 0.6, 0.8, 1.0])   # 显式刻度，避免自动生成越界刻度(1.4)溢出画布
 ax.grid(axis="y", ls=":", alpha=0.45, zorder=0); ax.set_axisbelow(True)
 for s in ["top", "right"]:
@@ -207,7 +207,9 @@ h = [Line2D([], [], marker="o", linestyle="none", color=OI["blue"],
             markeredgecolor="black", markersize=7, label="G1 结构化快照"),
      Line2D([], [], marker="o", linestyle="none", color=OI["green"],
             markeredgecolor="black", markersize=7, label="G3 仅意图")]
-ax.legend(handles=h, fontsize=8, frameon=False, loc="lower right")
+fig.legend(handles=h, fontsize=8, frameon=False, ncol=2,
+           loc="lower center", bbox_to_anchor=(0.5, 0.015),
+           handletextpad=0.6, columnspacing=1.8)
 _qa(fig, "fig5_taskdep"); _gray(fig, "fig5_taskdep")
 fig.savefig(os.path.join(OUT, "fig4_taskdep.png"), dpi=600, facecolor="white")
 fig.savefig(os.path.join(OUT, "fig4_taskdep.pdf"), facecolor="white")
