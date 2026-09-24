@@ -193,12 +193,12 @@ for si, sc in enumerate(scenes):
         ax.scatter(x, v, s=32, color=c, alpha=0.9, edgecolor="black",
                    linewidth=0.5, zorder=3)
         m = st.mean(v)
-        ax.plot([si + off - 0.10, si + off + 0.10], [m, m], color="black", lw=1.8, zorder=4)
+        ax.plot([si + off - 0.11, si + off + 0.11], [m, m], color="black", lw=1.7, zorder=2)
     d = st.mean(vals_scene(sc, "B2", "M2_recall")) - st.mean(vals_scene(sc, "B2A2", "M2_recall"))
-    ax.text(si, 1.13, f"Δ={d:+.2f}", ha="center", fontsize=8.5,
+    ax.text(si, 1.10, f"Δ={d:+.2f}", ha="center", fontsize=8.5,
             color=OI["vermillion"], fontweight="bold", fontfamily="Microsoft YaHei")
 ax.set_xticks(range(3)); ax.set_xticklabels(snames, fontsize=9.5)
-ax.set_ylabel("目标物体覆盖率", fontsize=10); ax.set_ylim(0, 1.24)
+ax.set_ylabel("目标物体覆盖率", fontsize=10); ax.set_ylim(0, 1.18)
 ax.set_yticks([0, 0.2, 0.4, 0.6, 0.8, 1.0])   # 显式刻度，避免自动生成越界刻度(1.4)溢出画布
 ax.grid(axis="y", ls=":", alpha=0.45, zorder=0); ax.set_axisbelow(True)
 for s in ["top", "right"]:
