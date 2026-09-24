@@ -60,3 +60,11 @@
 [28] HORVITZ E. Principles of Mixed-Initiative User Interfaces[C]//Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI'99). Pittsburgh: ACM, 1999: 159-166. DOI: 10.1145/302979.303030. [核实]
 
 [29] PARASURAMAN R, SHERIDAN T B, WICKENS C D. A model for types and levels of human interaction with automation[J]. IEEE Transactions on Systems, Man, and Cybernetics - Part A: Systems and Humans, 2000, 30(3): 286-297. DOI: 10.1109/3468.844354. [核实]
+
+[30] EvoPhys Team. EvoPhys-World: Human-Centric Scene-Level Controllable 5D World Model[EB/OL]. 项目主页, 2026. https://evophys.com/ （注：项目页，尚未见同行评审论文；arXiv 检索无对应条目）
+
+[31] CO P, HU S, JIAO C, et al. WorldSimProbe: Diagnosing Simulator Faithfulness in Action-Conditioned World Models for Embodied Manipulation[EB/OL]. arXiv:2608.09298, 2026. https://arxiv.org/abs/2608.09298 [核实]
+
+[32] DUAN H, YU H-X, CHEN S, et al. WorldScore: A Unified Evaluation Benchmark for World Generation[C]//Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV), 2025. arXiv:2504.00983. https://arxiv.org/abs/2504.00983 [核实]
+
+[33] ZHAO Y, GUAN S, WANG Y, et al. NeoWorld: Neural Simulation of Explorable Virtual Worlds via Progressive 3D Unfolding[EB/OL]. arXiv:2509.24441, 2025. https://arxiv.org/abs/2509.24441 [核实]
