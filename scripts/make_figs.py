@@ -87,9 +87,9 @@ arrow(ax, (0.74, 0.800), (0.59, 0.755), color=OI["green"], lw=1.7)
 ax.text(0.655, 0.828, "状态接地", fontsize=7.8, color=OI["green"], ha="center")
 
 # ---- 状态回写：导出物 -> SGL（走右侧外侧，避免与任何框/箭头交叉）----
-arrow(ax, (0.68, 0.140), (0.88, 0.140), color=OI["green"], lw=1.3, ls="--", style="-")
-arrow(ax, (0.88, 0.140), (0.88, 0.458), color=OI["green"], lw=1.3, ls="--")
-ax.text(0.795, 0.300, "解析融合\n状态回写", fontsize=8, color=OI["green"],
+arrow(ax, (0.68, 0.128), (0.88, 0.128), color=OI["green"], lw=1.3, ls="--", style="-")
+arrow(ax, (0.88, 0.128), (0.88, 0.458), color=OI["green"], lw=1.3, ls="--")
+ax.text(0.812, 0.300, "解析融合\n状态回写", fontsize=8, color=OI["green"],
         ha="center", va="center", linespacing=1.4)
 
 plt.subplots_adjust(left=0.01, right=0.99, top=0.95, bottom=0.02)

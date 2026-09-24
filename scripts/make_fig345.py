@@ -44,11 +44,35 @@ def cohen_d(a, b):
     return (ma - mb) / s if s > 0 else 0.0
 
 
+def _spread(vals, center, jitter, ythresh=0.0):
+    """Deterministic spread for strip plots.
+    Points whose values are vertically closer than `ythresh` (data units) are
+    grouped and spread evenly inside [center-jitter, center+jitter], so that no
+    two markers overlap -- unlike random jitter, which gives no guarantee."""
+    v = np.asarray(vals, float)
+    xs = np.full(len(v), center, float)
+    order = np.argsort(v, kind="stable")
+    vs = v[order]
+    k = 0
+    while k < len(vs):
+        j = k
+        while j + 1 < len(vs) and (vs[j + 1] - vs[j]) < ythresh:
+            j += 1
+        cnt = j - k + 1
+        if cnt > 1:
+            xs[order[k:j + 1]] = center + np.linspace(-jitter, jitter, cnt)
+        k = j + 1
+    return xs
+
+YT_STRIP = 0.030   # ~1.5x marker diameter in data units (fig3 panels)
+YT_SCENE = 0.045   # fig5 panels
+
+
 def dot_strip(ax, groups, labels, colors, jitter=0.20, seed=42):
     """画 stripplot + 均值线 + 标准差须（P1 合规做法）"""
     rs = np.random.RandomState(seed)
     for i, (v, c) in enumerate(zip(groups, colors)):
-        x = i + rs.uniform(-jitter, jitter, len(v))
+        x = _spread(v, i, jitter, ythresh=YT_STRIP)
         ax.scatter(x, v, s=20, color=c, alpha=0.9, edgecolor="black",
                    linewidth=0.4, zorder=3)
         m, sd = st.mean(v), st.pstdev(v)
@@ -165,7 +189,7 @@ for si, sc in enumerate(scenes):
     for ci, (cond, c) in enumerate([("B2", OI["blue"]), ("B2A2", OI["green"])]):
         v = vals_scene(sc, cond, "M2_recall")
         off = -0.16 if ci == 0 else 0.16
-        x = si + off + rs.uniform(-0.045, 0.045, len(v))
+        x = _spread(v, si + off, 0.10, ythresh=YT_SCENE)
         ax.scatter(x, v, s=32, color=c, alpha=0.9, edgecolor="black",
                    linewidth=0.5, zorder=3)
         m = st.mean(v)
