@@ -159,7 +159,7 @@ mets = ["目标物体精度", "目标物体覆盖率"]
 ds = [cohen_d(vals("B2", "M2_precision"), vals("B2A2", "M2_precision")),
       cohen_d(vals("B2", "M2_recall"), vals("B2A2", "M2_recall"))]
 y = np.arange(len(mets))
-for i, (d, c) in enumerate(zip(ds, [OI["skyblue"], OI["blue"]])):
+for i, (d, c) in enumerate(zip(ds, [OI["skyblue"], OI["vermillion"]])):
     ax.plot([0, d], [i, i], color=c, lw=3, solid_capstyle="butt", zorder=5)
     ax.scatter([d], [i], s=110, color=c, edgecolor="black", linewidth=0.8, zorder=6)
     ax.text(d + 0.06, i, f"{d:+.2f}", va="center", fontsize=10, fontweight="bold", fontfamily="Microsoft YaHei")
