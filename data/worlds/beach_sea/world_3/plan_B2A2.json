@@ -1,0 +1,232 @@
+{
+  "scene": "sandy_beach_coastline",
+  "objects": [
+    {
+      "id": "sandy_beach_terrain",
+      "type": "beach_ground_plane",
+      "position_norm": [
+        0.0,
+        -0.7,
+        0.25
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "mesh",
+        "material": "sand",
+        "rigid": true
+      }
+    },
+    {
+      "id": "ocean_water",
+      "type": "water_body",
+      "position_norm": [
+        0.0,
+        -0.75,
+        -0.8
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "none",
+        "material": "water",
+        "rigid": false
+      }
+    },
+    {
+      "id": "shoreline_waves",
+      "type": "wave_band",
+      "position_norm": [
+        0.0,
+        -0.66,
+        -0.35
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "none",
+        "material": "water",
+        "rigid": false
+      }
+    },
+    {
+      "id": "dune_formation",
+      "type": "sand_dune",
+      "position_norm": [
+        0.0,
+        -0.45,
+        0.85
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "mesh",
+        "material": "sand",
+        "rigid": true
+      }
+    },
+    {
+      "id": "dune_grass_patch",
+      "type": "grass_clump",
+      "position_norm": [
+        0.35,
+        -0.32,
+        0.88
+      ],
+      "size_class": "small",
+      "physics": {
+        "collision": "mesh",
+        "material": "grass",
+        "rigid": false
+      }
+    },
+    {
+      "id": "driftwood_log",
+      "type": "driftwood",
+      "position_norm": [
+        -0.45,
+        -0.58,
+        0.5
+      ],
+      "size_class": "small",
+      "physics": {
+        "collision": "box",
+        "material": "wood",
+        "rigid": true
+      }
+    },
+    {
+      "id": "beach_rock_cluster",
+      "type": "rock_cluster",
+      "position_norm": [
+        0.62,
+        -0.6,
+        0.4
+      ],
+      "size_class": "small",
+      "physics": {
+        "collision": "mesh",
+        "material": "stone",
+        "rigid": true
+      }
+    },
+    {
+      "id": "seashell_scatter",
+      "type": "shell_debris",
+      "position_norm": [
+        -0.2,
+        -0.64,
+        0.18
+      ],
+      "size_class": "small",
+      "physics": {
+        "collision": "box",
+        "material": "shell",
+        "rigid": false
+      }
+    },
+    {
+      "id": "rocky_headland",
+      "type": "coastal_cliff",
+      "position_norm": [
+        -0.85,
+        -0.5,
+        -0.55
+      ],
+      "size_class": "medium",
+      "physics": {
+        "collision": "mesh",
+        "material": "rock",
+        "rigid": true
+      }
+    },
+    {
+      "id": "palm_tree",
+      "type": "palm_tree",
+      "position_norm": [
+        0.78,
+        -0.45,
+        0.72
+      ],
+      "size_class": "medium",
+      "physics": {
+        "collision": "mesh",
+        "material": "wood",
+        "rigid": true
+      }
+    }
+  ],
+  "relations": [
+    {
+      "subject": "ocean_water",
+      "object": "sandy_beach_terrain",
+      "relation": "next_to"
+    },
+    {
+      "subject": "shoreline_waves",
+      "object": "ocean_water",
+      "relation": "next_to"
+    },
+    {
+      "subject": "shoreline_waves",
+      "object": "sandy_beach_terrain",
+      "relation": "above"
+    },
+    {
+      "subject": "dune_formation",
+      "object": "sandy_beach_terrain",
+      "relation": "on"
+    },
+    {
+      "subject": "dune_grass_patch",
+      "object": "dune_formation",
+      "relation": "on"
+    },
+    {
+      "subject": "driftwood_log",
+      "object": "sandy_beach_terrain",
+      "relation": "on"
+    },
+    {
+      "subject": "beach_rock_cluster",
+      "object": "sandy_beach_terrain",
+      "relation": "on"
+    },
+    {
+      "subject": "seashell_scatter",
+      "object": "sandy_beach_terrain",
+      "relation": "on"
+    },
+    {
+      "subject": "seashell_scatter",
+      "object": "shoreline_waves",
+      "relation": "next_to"
+    },
+    {
+      "subject": "rocky_headland",
+      "object": "ocean_water",
+      "relation": "next_to"
+    },
+    {
+      "subject": "palm_tree",
+      "object": "dune_formation",
+      "relation": "on"
+    },
+    {
+      "subject": "palm_tree",
+      "object": "rocky_headland",
+      "relation": "facing"
+    }
+  ],
+  "hierarchy": {
+    "root": "sandy_beach_coastline",
+    "children": [
+      "sandy_beach_terrain",
+      "ocean_water",
+      "shoreline_waves",
+      "dune_formation",
+      "dune_grass_patch",
+      "driftwood_log",
+      "beach_rock_cluster",
+      "seashell_scatter",
+      "rocky_headland",
+      "palm_tree"
+    ]
+  }
+}

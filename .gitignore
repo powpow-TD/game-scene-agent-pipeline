@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# 环境变量与密钥（切勿提交）
+.env
+*.key
+secrets.json
+
+# 大体积场景资产（GLB / 高斯泼溅 / 全分辨率全景图）
+*.glb
+*.spz
+*.ply
+pano.png
+splat_full.spz
+
+# 生成中间产物
+*.log
+_output/

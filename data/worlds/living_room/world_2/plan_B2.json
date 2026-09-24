@@ -1,0 +1,280 @@
+{
+  "scene": "modern_living_room",
+  "objects": [
+    {
+      "id": "sectional_sofa",
+      "type": "fabric sectional sofa",
+      "position_norm": [
+        0.0,
+        -0.45,
+        0.35
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "mesh",
+        "material": "fabric",
+        "rigid": false
+      }
+    },
+    {
+      "id": "coffee_table",
+      "type": "wooden coffee table",
+      "position_norm": [
+        0.0,
+        -0.5,
+        -0.15
+      ],
+      "size_class": "medium",
+      "physics": {
+        "collision": "box",
+        "material": "wood",
+        "rigid": true
+      }
+    },
+    {
+      "id": "rug",
+      "type": "neutral-toned area rug",
+      "position_norm": [
+        0.0,
+        -0.65,
+        -0.1
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "box",
+        "material": "fabric",
+        "rigid": false
+      }
+    },
+    {
+      "id": "left_bookshelf_tv_unit",
+      "type": "built-in wood bookshelf with television",
+      "position_norm": [
+        -0.55,
+        0.05,
+        -0.75
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "box",
+        "material": "wood",
+        "rigid": true
+      }
+    },
+    {
+      "id": "television",
+      "type": "large flat-screen television",
+      "position_norm": [
+        -0.5,
+        -0.15,
+        -0.7
+      ],
+      "size_class": "medium",
+      "physics": {
+        "collision": "box",
+        "material": "glass",
+        "rigid": true
+      }
+    },
+    {
+      "id": "right_bookshelf",
+      "type": "wall-mounted wood shelving unit with books",
+      "position_norm": [
+        0.6,
+        0.1,
+        -0.8
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "box",
+        "material": "wood",
+        "rigid": true
+      }
+    },
+    {
+      "id": "books",
+      "type": "books and decorative objects",
+      "position_norm": [
+        -0.5,
+        0.3,
+        -0.75
+      ],
+      "size_class": "small",
+      "physics": {
+        "collision": "none",
+        "material": "other",
+        "rigid": false
+      }
+    },
+    {
+      "id": "floor_lamp",
+      "type": "tall slender floor lamp",
+      "position_norm": [
+        -0.22,
+        0.0,
+        -0.95
+      ],
+      "size_class": "medium",
+      "physics": {
+        "collision": "mesh",
+        "material": "metal",
+        "rigid": true
+      }
+    },
+    {
+      "id": "window",
+      "type": "large window",
+      "position_norm": [
+        0.05,
+        0.2,
+        -1.0
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "none",
+        "material": "glass",
+        "rigid": false
+      }
+    },
+    {
+      "id": "curtains",
+      "type": "elegant floor-length curtains",
+      "position_norm": [
+        -0.15,
+        0.15,
+        -0.98
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "none",
+        "material": "fabric",
+        "rigid": false
+      }
+    },
+    {
+      "id": "framed_art",
+      "type": "framed wall art panels",
+      "position_norm": [
+        0.95,
+        0.2,
+        -0.1
+      ],
+      "size_class": "medium",
+      "physics": {
+        "collision": "none",
+        "material": "glass",
+        "rigid": false
+      }
+    },
+    {
+      "id": "hallway_opening",
+      "type": "open doorway to hallway",
+      "position_norm": [
+        -1.0,
+        0.0,
+        0.2
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "none",
+        "material": "stone",
+        "rigid": false
+      }
+    },
+    {
+      "id": "walls",
+      "type": "plaster walls and ceiling",
+      "position_norm": [
+        0.0,
+        0.6,
+        0.0
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "mesh",
+        "material": "stone",
+        "rigid": true
+      }
+    }
+  ],
+  "relations": [
+    {
+      "subject": "coffee_table",
+      "object": "sectional_sofa",
+      "relation": "next_to"
+    },
+    {
+      "subject": "sectional_sofa",
+      "object": "rug",
+      "relation": "on"
+    },
+    {
+      "subject": "coffee_table",
+      "object": "rug",
+      "relation": "on"
+    },
+    {
+      "subject": "television",
+      "object": "left_bookshelf_tv_unit",
+      "relation": "inside"
+    },
+    {
+      "subject": "books",
+      "object": "right_bookshelf",
+      "relation": "inside"
+    },
+    {
+      "subject": "books",
+      "object": "left_bookshelf_tv_unit",
+      "relation": "inside"
+    },
+    {
+      "subject": "floor_lamp",
+      "object": "window",
+      "relation": "next_to"
+    },
+    {
+      "subject": "curtains",
+      "object": "window",
+      "relation": "next_to"
+    },
+    {
+      "subject": "right_bookshelf",
+      "object": "window",
+      "relation": "next_to"
+    },
+    {
+      "subject": "framed_art",
+      "object": "right_bookshelf",
+      "relation": "next_to"
+    },
+    {
+      "subject": "sectional_sofa",
+      "object": "coffee_table",
+      "relation": "facing"
+    },
+    {
+      "subject": "window",
+      "object": "coffee_table",
+      "relation": "above"
+    }
+  ],
+  "hierarchy": {
+    "root": "modern_living_room",
+    "children": [
+      "sectional_sofa",
+      "coffee_table",
+      "rug",
+      "left_bookshelf_tv_unit",
+      "television",
+      "right_bookshelf",
+      "books",
+      "floor_lamp",
+      "window",
+      "curtains",
+      "framed_art",
+      "hallway_opening",
+      "walls"
+    ]
+  }
+}

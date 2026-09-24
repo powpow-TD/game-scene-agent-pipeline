@@ -1,0 +1,274 @@
+{
+  "scene": "modern_living_room",
+  "objects": [
+    {
+      "id": "rug",
+      "type": "area_rug",
+      "position_norm": [
+        0.0,
+        -0.98,
+        0.0
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "none",
+        "material": "fabric",
+        "rigid": false
+      }
+    },
+    {
+      "id": "sofa",
+      "type": "three_seat_sofa",
+      "position_norm": [
+        0.0,
+        -0.65,
+        -0.65
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "box",
+        "material": "fabric",
+        "rigid": true
+      }
+    },
+    {
+      "id": "coffee_table",
+      "type": "coffee_table",
+      "position_norm": [
+        0.0,
+        -0.75,
+        -0.05
+      ],
+      "size_class": "medium",
+      "physics": {
+        "collision": "box",
+        "material": "wood",
+        "rigid": true
+      }
+    },
+    {
+      "id": "tv_console",
+      "type": "media_console",
+      "position_norm": [
+        0.0,
+        -0.75,
+        0.78
+      ],
+      "size_class": "medium",
+      "physics": {
+        "collision": "box",
+        "material": "wood",
+        "rigid": true
+      }
+    },
+    {
+      "id": "tv",
+      "type": "flat_screen_tv",
+      "position_norm": [
+        0.0,
+        -0.25,
+        0.78
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "box",
+        "material": "glass",
+        "rigid": true
+      }
+    },
+    {
+      "id": "armchair",
+      "type": "lounge_armchair",
+      "position_norm": [
+        0.68,
+        -0.65,
+        -0.05
+      ],
+      "size_class": "medium",
+      "physics": {
+        "collision": "box",
+        "material": "fabric",
+        "rigid": true
+      }
+    },
+    {
+      "id": "floor_lamp",
+      "type": "floor_lamp",
+      "position_norm": [
+        -0.82,
+        -0.55,
+        -0.65
+      ],
+      "size_class": "medium",
+      "physics": {
+        "collision": "mesh",
+        "material": "metal",
+        "rigid": true
+      }
+    },
+    {
+      "id": "plant",
+      "type": "potted_plant",
+      "position_norm": [
+        0.82,
+        -0.55,
+        -0.65
+      ],
+      "size_class": "medium",
+      "physics": {
+        "collision": "mesh",
+        "material": "plant",
+        "rigid": false
+      }
+    },
+    {
+      "id": "bookshelf",
+      "type": "low_bookshelf",
+      "position_norm": [
+        -0.88,
+        -0.45,
+        0.28
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "box",
+        "material": "wood",
+        "rigid": true
+      }
+    },
+    {
+      "id": "side_table",
+      "type": "side_table",
+      "position_norm": [
+        -0.55,
+        -0.78,
+        -0.65
+      ],
+      "size_class": "small",
+      "physics": {
+        "collision": "box",
+        "material": "wood",
+        "rigid": true
+      }
+    },
+    {
+      "id": "wall_art",
+      "type": "framed_wall_art",
+      "position_norm": [
+        0.0,
+        0.25,
+        -0.98
+      ],
+      "size_class": "medium",
+      "physics": {
+        "collision": "box",
+        "material": "canvas",
+        "rigid": true
+      }
+    },
+    {
+      "id": "ceiling_light",
+      "type": "ceiling_light",
+      "position_norm": [
+        0.0,
+        0.9,
+        0.0
+      ],
+      "size_class": "small",
+      "physics": {
+        "collision": "none",
+        "material": "metal",
+        "rigid": true
+      }
+    }
+  ],
+  "relations": [
+    {
+      "subject": "coffee_table",
+      "object": "rug",
+      "relation": "on"
+    },
+    {
+      "subject": "sofa",
+      "object": "rug",
+      "relation": "on"
+    },
+    {
+      "subject": "tv",
+      "object": "tv_console",
+      "relation": "on"
+    },
+    {
+      "subject": "armchair",
+      "object": "coffee_table",
+      "relation": "next_to"
+    },
+    {
+      "subject": "armchair",
+      "object": "tv",
+      "relation": "facing"
+    },
+    {
+      "subject": "floor_lamp",
+      "object": "sofa",
+      "relation": "next_to"
+    },
+    {
+      "subject": "side_table",
+      "object": "sofa",
+      "relation": "next_to"
+    },
+    {
+      "subject": "plant",
+      "object": "tv_console",
+      "relation": "next_to"
+    },
+    {
+      "subject": "bookshelf",
+      "object": "side_table",
+      "relation": "next_to"
+    },
+    {
+      "subject": "wall_art",
+      "object": "sofa",
+      "relation": "above"
+    },
+    {
+      "subject": "ceiling_light",
+      "object": "coffee_table",
+      "relation": "above"
+    },
+    {
+      "subject": "rug",
+      "object": "coffee_table",
+      "relation": "under"
+    },
+    {
+      "subject": "rug",
+      "object": "sofa",
+      "relation": "under"
+    },
+    {
+      "subject": "tv_console",
+      "object": "tv",
+      "relation": "under"
+    }
+  ],
+  "hierarchy": {
+    "root": "modern_living_room",
+    "children": [
+      "rug",
+      "sofa",
+      "coffee_table",
+      "tv_console",
+      "tv",
+      "armchair",
+      "floor_lamp",
+      "plant",
+      "bookshelf",
+      "side_table",
+      "wall_art",
+      "ceiling_light"
+    ]
+  }
+}

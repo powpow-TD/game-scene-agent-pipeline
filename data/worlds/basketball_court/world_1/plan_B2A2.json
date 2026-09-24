@@ -1,0 +1,406 @@
+{
+  "scene": "outdoor_basketball_court",
+  "objects": [
+    {
+      "id": "court_surface",
+      "type": "court_surface",
+      "position_norm": [
+        0,
+        -0.05,
+        0
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "box",
+        "material": "asphalt",
+        "rigid": true
+      }
+    },
+    {
+      "id": "center_circle",
+      "type": "center_circle",
+      "position_norm": [
+        0,
+        -0.04,
+        0
+      ],
+      "size_class": "medium",
+      "physics": {
+        "collision": "none",
+        "material": "paint",
+        "rigid": false
+      }
+    },
+    {
+      "id": "pole_left",
+      "type": "basketball_pole",
+      "position_norm": [
+        0,
+        0.15,
+        -0.95
+      ],
+      "size_class": "medium",
+      "physics": {
+        "collision": "box",
+        "material": "metal",
+        "rigid": true
+      }
+    },
+    {
+      "id": "backboard_left",
+      "type": "backboard",
+      "position_norm": [
+        0,
+        0.35,
+        -0.88
+      ],
+      "size_class": "medium",
+      "physics": {
+        "collision": "box",
+        "material": "plexiglass",
+        "rigid": true
+      }
+    },
+    {
+      "id": "rim_left",
+      "type": "basketball_rim",
+      "position_norm": [
+        0,
+        0.25,
+        -0.78
+      ],
+      "size_class": "small",
+      "physics": {
+        "collision": "mesh",
+        "material": "metal",
+        "rigid": true
+      }
+    },
+    {
+      "id": "net_left",
+      "type": "basketball_net",
+      "position_norm": [
+        0,
+        0.18,
+        -0.78
+      ],
+      "size_class": "small",
+      "physics": {
+        "collision": "none",
+        "material": "nylon",
+        "rigid": false
+      }
+    },
+    {
+      "id": "pole_right",
+      "type": "basketball_pole",
+      "position_norm": [
+        0,
+        0.15,
+        0.95
+      ],
+      "size_class": "medium",
+      "physics": {
+        "collision": "box",
+        "material": "metal",
+        "rigid": true
+      }
+    },
+    {
+      "id": "backboard_right",
+      "type": "backboard",
+      "position_norm": [
+        0,
+        0.35,
+        0.88
+      ],
+      "size_class": "medium",
+      "physics": {
+        "collision": "box",
+        "material": "plexiglass",
+        "rigid": true
+      }
+    },
+    {
+      "id": "rim_right",
+      "type": "basketball_rim",
+      "position_norm": [
+        0,
+        0.25,
+        0.78
+      ],
+      "size_class": "small",
+      "physics": {
+        "collision": "mesh",
+        "material": "metal",
+        "rigid": true
+      }
+    },
+    {
+      "id": "net_right",
+      "type": "basketball_net",
+      "position_norm": [
+        0,
+        0.18,
+        0.78
+      ],
+      "size_class": "small",
+      "physics": {
+        "collision": "none",
+        "material": "nylon",
+        "rigid": false
+      }
+    },
+    {
+      "id": "basketball",
+      "type": "basketball",
+      "position_norm": [
+        0.2,
+        0.1,
+        0.1
+      ],
+      "size_class": "small",
+      "physics": {
+        "collision": "mesh",
+        "material": "rubber",
+        "rigid": true
+      }
+    },
+    {
+      "id": "fence_left",
+      "type": "fence",
+      "position_norm": [
+        -1.0,
+        0.1,
+        0
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "box",
+        "material": "metal",
+        "rigid": true
+      }
+    },
+    {
+      "id": "fence_right",
+      "type": "fence",
+      "position_norm": [
+        1.0,
+        0.1,
+        0
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "box",
+        "material": "metal",
+        "rigid": true
+      }
+    },
+    {
+      "id": "fence_back",
+      "type": "fence",
+      "position_norm": [
+        0,
+        0.1,
+        -1.0
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "box",
+        "material": "metal",
+        "rigid": true
+      }
+    },
+    {
+      "id": "fence_front",
+      "type": "fence",
+      "position_norm": [
+        0,
+        0.1,
+        1.0
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "box",
+        "material": "metal",
+        "rigid": true
+      }
+    },
+    {
+      "id": "bench_left",
+      "type": "bench",
+      "position_norm": [
+        -0.8,
+        0.05,
+        0
+      ],
+      "size_class": "medium",
+      "physics": {
+        "collision": "box",
+        "material": "wood",
+        "rigid": true
+      }
+    },
+    {
+      "id": "bench_right",
+      "type": "bench",
+      "position_norm": [
+        0.8,
+        0.05,
+        0
+      ],
+      "size_class": "medium",
+      "physics": {
+        "collision": "box",
+        "material": "wood",
+        "rigid": true
+      }
+    },
+    {
+      "id": "light_pole_left",
+      "type": "light_pole",
+      "position_norm": [
+        -0.9,
+        0.3,
+        -0.9
+      ],
+      "size_class": "medium",
+      "physics": {
+        "collision": "box",
+        "material": "metal",
+        "rigid": true
+      }
+    },
+    {
+      "id": "light_pole_right",
+      "type": "light_pole",
+      "position_norm": [
+        0.9,
+        0.3,
+        0.9
+      ],
+      "size_class": "medium",
+      "physics": {
+        "collision": "box",
+        "material": "metal",
+        "rigid": true
+      }
+    }
+  ],
+  "relations": [
+    {
+      "subject": "center_circle",
+      "object": "court_surface",
+      "relation": "on"
+    },
+    {
+      "subject": "backboard_left",
+      "object": "pole_left",
+      "relation": "next_to"
+    },
+    {
+      "subject": "rim_left",
+      "object": "backboard_left",
+      "relation": "next_to"
+    },
+    {
+      "subject": "net_left",
+      "object": "rim_left",
+      "relation": "under"
+    },
+    {
+      "subject": "backboard_right",
+      "object": "pole_right",
+      "relation": "next_to"
+    },
+    {
+      "subject": "rim_right",
+      "object": "backboard_right",
+      "relation": "next_to"
+    },
+    {
+      "subject": "net_right",
+      "object": "rim_right",
+      "relation": "under"
+    },
+    {
+      "subject": "basketball",
+      "object": "court_surface",
+      "relation": "on"
+    },
+    {
+      "subject": "bench_left",
+      "object": "court_surface",
+      "relation": "next_to"
+    },
+    {
+      "subject": "bench_right",
+      "object": "court_surface",
+      "relation": "next_to"
+    },
+    {
+      "subject": "fence_left",
+      "object": "court_surface",
+      "relation": "next_to"
+    },
+    {
+      "subject": "fence_right",
+      "object": "court_surface",
+      "relation": "next_to"
+    },
+    {
+      "subject": "fence_back",
+      "object": "court_surface",
+      "relation": "next_to"
+    },
+    {
+      "subject": "fence_front",
+      "object": "court_surface",
+      "relation": "next_to"
+    },
+    {
+      "subject": "light_pole_left",
+      "object": "court_surface",
+      "relation": "above"
+    },
+    {
+      "subject": "light_pole_right",
+      "object": "court_surface",
+      "relation": "above"
+    },
+    {
+      "subject": "backboard_left",
+      "object": "backboard_right",
+      "relation": "facing"
+    },
+    {
+      "subject": "rim_left",
+      "object": "rim_right",
+      "relation": "facing"
+    }
+  ],
+  "hierarchy": {
+    "root": "outdoor_basketball_court",
+    "children": [
+      "court_surface",
+      "center_circle",
+      "pole_left",
+      "backboard_left",
+      "rim_left",
+      "net_left",
+      "pole_right",
+      "backboard_right",
+      "rim_right",
+      "net_right",
+      "basketball",
+      "fence_left",
+      "fence_right",
+      "fence_back",
+      "fence_front",
+      "bench_left",
+      "bench_right",
+      "light_pole_left",
+      "light_pole_right"
+    ]
+  }
+}

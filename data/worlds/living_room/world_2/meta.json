@@ -1,0 +1,23 @@
+{
+  "world_id": "289914f5-ce5e-4c3b-a8ff-0c3d3e0dc83d",
+  "model": "marble-1.1",
+  "prompt": "a modern living room interior with a fabric sofa, wooden coffee table, bookshelf, floor lamp, and a large window with curtains, warm indoor lighting",
+  "caption": "The scene is a modern living room interior, rendered in a realistic style, exuding a warm and inviting atmosphere through its thoughtful design and lighting. The room is anchored by a plush, fabric sofa, its soft texture contrasting with the sleek lines of the surrounding furniture. A wooden coffee table, with a smooth, polished surface, sits centrally in front of the sofa, providing a focal point for the seating area. Adjacent to the sofa, a tall, slender floor lamp casts a gentle, ambient glow, contributing to the overall warm indoor lighting. A large bookshelf, filled with an assortment of books and decorative objects, occupies a prominent wall, adding a touch of intellectual charm and personal character to the space. A expansive window, draped with elegant curtains, allows natural light to filter into the room during the day, while at night, it frames the exterior world. The floor is covered with a soft, neutral-toned rug, enhancing the room's comfort and defining the main seating area. The fabric sofa is positioned against one wall, facing the wooden coffee table. The floor lamp stands to the left of the sofa, its light directed towards the seating area. The bookshelf is situated on the wall opposite the window, creating a balanced visual weight within the room. The large window with curtains is on the right side of the sofa. ",
+  "semantics": {
+    "metric_scale_factor": 1.7320141792297363,
+    "ground_plane_offset": 0.8048968315124512
+  },
+  "cost": {
+    "total_credits": 1580,
+    "line_items": [
+      {
+        "name": "Pano generation (text)",
+        "credits": 80
+      },
+      {
+        "name": "World generation",
+        "credits": 1500
+      }
+    ]
+  }
+}

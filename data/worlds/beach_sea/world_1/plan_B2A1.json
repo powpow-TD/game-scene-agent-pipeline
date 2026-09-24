@@ -1,0 +1,159 @@
+{
+  "scene": "sandy_beach",
+  "objects": [
+    {
+      "id": "sand_beach",
+      "type": "sandy beach ground",
+      "position_norm": [
+        0.0,
+        -0.55,
+        0.25
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "mesh",
+        "material": "sand",
+        "rigid": true
+      }
+    },
+    {
+      "id": "ocean_water",
+      "type": "ocean water",
+      "position_norm": [
+        -0.75,
+        -0.6,
+        -0.45
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "none",
+        "material": "water",
+        "rigid": false
+      }
+    },
+    {
+      "id": "shoreline_waves",
+      "type": "breaking wave with foam edge",
+      "position_norm": [
+        -0.62,
+        -0.6,
+        -0.3
+      ],
+      "size_class": "medium",
+      "physics": {
+        "collision": "none",
+        "material": "water",
+        "rigid": false
+      }
+    },
+    {
+      "id": "sand_dunes",
+      "type": "sand dune ridge",
+      "position_norm": [
+        0.15,
+        0.25,
+        -0.85
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "mesh",
+        "material": "sand",
+        "rigid": true
+      }
+    },
+    {
+      "id": "dune_grass",
+      "type": "sparse light-colored beach grass",
+      "position_norm": [
+        0.15,
+        0.45,
+        -0.85
+      ],
+      "size_class": "small",
+      "physics": {
+        "collision": "none",
+        "material": "other",
+        "rigid": false
+      }
+    },
+    {
+      "id": "scattered_shells",
+      "type": "seashells",
+      "position_norm": [
+        -0.1,
+        -0.85,
+        0.2
+      ],
+      "size_class": "small",
+      "physics": {
+        "collision": "box",
+        "material": "stone",
+        "rigid": true
+      }
+    },
+    {
+      "id": "sky_dome",
+      "type": "sky",
+      "position_norm": [
+        0.0,
+        0.9,
+        0.0
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "none",
+        "material": "air",
+        "rigid": false
+      }
+    }
+  ],
+  "relations": [
+    {
+      "subject": "sand_dunes",
+      "object": "sand_beach",
+      "relation": "next_to"
+    },
+    {
+      "subject": "dune_grass",
+      "object": "sand_dunes",
+      "relation": "on"
+    },
+    {
+      "subject": "shoreline_waves",
+      "object": "ocean_water",
+      "relation": "next_to"
+    },
+    {
+      "subject": "shoreline_waves",
+      "object": "sand_beach",
+      "relation": "next_to"
+    },
+    {
+      "subject": "scattered_shells",
+      "object": "sand_beach",
+      "relation": "on"
+    },
+    {
+      "subject": "ocean_water",
+      "object": "sand_beach",
+      "relation": "next_to"
+    },
+    {
+      "subject": "sky_dome",
+      "object": "sand_dunes",
+      "relation": "above"
+    }
+  ],
+  "hierarchy": {
+    "root": "sandy_beach",
+    "children": [
+      "sand_beach",
+      "ocean_water",
+      "shoreline_waves",
+      "sand_dunes",
+      "dune_grass",
+      "scattered_shells",
+      "sky_dome"
+    ]
+  }
+}

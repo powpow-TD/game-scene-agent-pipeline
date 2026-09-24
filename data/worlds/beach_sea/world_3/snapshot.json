@@ -1,0 +1,315 @@
+{
+  "scene": "sandy_beach_coastline",
+  "objects": [
+    {
+      "id": "beach_sand",
+      "type": "sand beach surface",
+      "position": [
+        -11.17167854309082,
+        -4.422905999422073,
+        -2.320894241333008
+      ],
+      "position_norm": [
+        0.0,
+        -0.85,
+        0.0
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "mesh",
+        "material": "sand",
+        "rigid": true
+      },
+      "confidence": 0.95,
+      "evidence": "both"
+    },
+    {
+      "id": "ocean_water",
+      "type": "ocean water",
+      "position": [
+        -54.300282859802245,
+        -4.608707797527313,
+        -2.320894241333008
+      ],
+      "position_norm": [
+        -0.9,
+        -0.9,
+        0.0
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "none",
+        "material": "water",
+        "rigid": false
+      },
+      "confidence": 0.85,
+      "evidence": "both"
+    },
+    {
+      "id": "ocean_water_far_side",
+      "type": "ocean water (opposite shoreline)",
+      "position": [
+        32.91533920288086,
+        -4.608707797527313,
+        -2.320894241333008
+      ],
+      "position_norm": [
+        0.92,
+        -0.9,
+        0.0
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "none",
+        "material": "water",
+        "rigid": false
+      },
+      "confidence": 0.6,
+      "evidence": "image"
+    },
+    {
+      "id": "breaking_wave_foam",
+      "type": "breaking wave / foam line",
+      "position": [
+        -47.11218214035034,
+        -4.608707797527313,
+        -10.641481113433837
+      ],
+      "position_norm": [
+        -0.75,
+        -0.9,
+        -0.15
+      ],
+      "size_class": "medium",
+      "physics": {
+        "collision": "none",
+        "material": "water",
+        "rigid": false
+      },
+      "confidence": 0.7,
+      "evidence": "both"
+    },
+    {
+      "id": "sand_dunes",
+      "type": "sand dunes",
+      "position": [
+        -11.17167854309082,
+        -2.5648880183696745,
+        44.82909803390503
+      ],
+      "position_norm": [
+        0.0,
+        -0.35,
+        0.85
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "mesh",
+        "material": "sand",
+        "rigid": true
+      },
+      "confidence": 0.9,
+      "evidence": "both"
+    },
+    {
+      "id": "dune_grass",
+      "type": "beach grass tufts",
+      "position": [
+        -8.775644969940185,
+        -2.193284422159195,
+        44.82909803390503
+      ],
+      "position_norm": [
+        0.05,
+        -0.25,
+        0.85
+      ],
+      "size_class": "small",
+      "physics": {
+        "collision": "none",
+        "material": "other",
+        "rigid": false
+      },
+      "confidence": 0.65,
+      "evidence": "both"
+    },
+    {
+      "id": "scattered_shells",
+      "type": "seashells",
+      "position": [
+        -3.9835778236389165,
+        -4.534387078285217,
+        3.2261636734008796
+      ],
+      "position_norm": [
+        0.15,
+        -0.88,
+        0.1
+      ],
+      "size_class": "small",
+      "physics": {
+        "collision": "box",
+        "material": "stone",
+        "rigid": true
+      },
+      "confidence": 0.6,
+      "evidence": "both"
+    },
+    {
+      "id": "sky",
+      "type": "clear sky",
+      "position": [
+        -11.17167854309082,
+        2.4517605304718018,
+        -2.320894241333008
+      ],
+      "position_norm": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "none",
+        "material": null,
+        "rigid": false
+      },
+      "confidence": 0.8,
+      "evidence": "both"
+    },
+    {
+      "id": "sun",
+      "type": "bright sun / light source",
+      "position": [
+        -11.17167854309082,
+        2.4517605304718018,
+        36.50851116180419
+      ],
+      "position_norm": [
+        0.0,
+        1.0,
+        0.7
+      ],
+      "size_class": "medium",
+      "physics": {
+        "collision": "none",
+        "material": null,
+        "rigid": false
+      },
+      "confidence": 0.55,
+      "evidence": "both"
+    },
+    {
+      "id": "wet_sand_strip",
+      "type": "wet sand / tidal zone",
+      "position": [
+        -42.32011499404908,
+        -4.4972267186641695,
+        -5.0944231986999515
+      ],
+      "position_norm": [
+        -0.65,
+        -0.87,
+        -0.05
+      ],
+      "size_class": "medium",
+      "physics": {
+        "collision": "mesh",
+        "material": "sand",
+        "rigid": true
+      },
+      "confidence": 0.6,
+      "evidence": "image"
+    }
+  ],
+  "relations": [
+    {
+      "subject": "ocean_water",
+      "object": "beach_sand",
+      "relation": "next_to"
+    },
+    {
+      "subject": "breaking_wave_foam",
+      "object": "beach_sand",
+      "relation": "next_to"
+    },
+    {
+      "subject": "wet_sand_strip",
+      "object": "beach_sand",
+      "relation": "on"
+    },
+    {
+      "subject": "scattered_shells",
+      "object": "beach_sand",
+      "relation": "on"
+    },
+    {
+      "subject": "sand_dunes",
+      "object": "beach_sand",
+      "relation": "next_to"
+    },
+    {
+      "subject": "dune_grass",
+      "object": "sand_dunes",
+      "relation": "on"
+    },
+    {
+      "subject": "sky",
+      "object": "ocean_water",
+      "relation": "above"
+    },
+    {
+      "subject": "sun",
+      "object": "sky",
+      "relation": "inside"
+    }
+  ],
+  "hierarchy": {
+    "root": "sandy_beach_coastline",
+    "children": [
+      "beach_sand",
+      "ocean_water",
+      "ocean_water_far_side",
+      "breaking_wave_foam",
+      "wet_sand_strip",
+      "scattered_shells",
+      "sand_dunes",
+      "dune_grass",
+      "sky",
+      "sun"
+    ]
+  },
+  "lighting": {
+    "condition": "sunny",
+    "notes": "Caption describes strong clear-sky sunlight; the panorama is panorama-dark/underexposed with a strong glare highlight near the horizon, so the effective illumination reads as low-key backlit rather than bright midday."
+  },
+  "physics_missing": [],
+  "uncertain": [
+    "lighting (caption says bright sun, image appears dusk/night-like)",
+    "scattered_shells (small and hard to localize precisely)",
+    "ocean_water_far_side (panoramic wrap makes the second water body ambiguous)",
+    "exact orientation of the dune ridge relative to the camera"
+  ],
+  "provenance": {
+    "backend": "deepseek",
+    "model": "deepseek-flash",
+    "clamped_positions": 0,
+    "source_caption": true,
+    "source_pano": true
+  },
+  "_occupancy": {
+    "voxel_size": 1.0,
+    "occupied_voxels": 6698,
+    "bounds_min": [
+      -59.092350006103516,
+      -4.980311393737793,
+      -57.791473388671875
+    ],
+    "bounds_max": [
+      36.748992919921875,
+      2.4517605304718018,
+      53.14968490600586
+    ],
+    "total_faces": 67402
+  }
+}

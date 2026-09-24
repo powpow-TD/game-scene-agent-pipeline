@@ -1,0 +1,217 @@
+{
+  "scene": "outdoor_basketball_court",
+  "objects": [
+    {
+      "id": "court_surface",
+      "type": "painted_asphalt_basketball_court_floor",
+      "position_norm": [
+        0.0,
+        -0.95,
+        0.0
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "box",
+        "material": "stone",
+        "rigid": true
+      }
+    },
+    {
+      "id": "basketball",
+      "type": "basketball",
+      "position_norm": [
+        0.08,
+        -0.87,
+        0.02
+      ],
+      "size_class": "small",
+      "physics": {
+        "collision": "mesh",
+        "material": "other",
+        "rigid": true
+      }
+    },
+    {
+      "id": "hoop_north",
+      "type": "basketball_hoop_with_backboard_and_net",
+      "position_norm": [
+        0.0,
+        -0.2,
+        1.0
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "mesh",
+        "material": "metal",
+        "rigid": true
+      }
+    },
+    {
+      "id": "hoop_south",
+      "type": "basketball_hoop_with_backboard_and_net",
+      "position_norm": [
+        0.0,
+        -0.2,
+        -0.9
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "mesh",
+        "material": "metal",
+        "rigid": true
+      }
+    },
+    {
+      "id": "bench_1",
+      "type": "metal_bench",
+      "position_norm": [
+        -0.55,
+        -0.8,
+        0.6
+      ],
+      "size_class": "medium",
+      "physics": {
+        "collision": "box",
+        "material": "metal",
+        "rigid": true
+      }
+    },
+    {
+      "id": "bench_2",
+      "type": "metal_bench",
+      "position_norm": [
+        0.6,
+        -0.8,
+        -0.2
+      ],
+      "size_class": "medium",
+      "physics": {
+        "collision": "box",
+        "material": "metal",
+        "rigid": true
+      }
+    },
+    {
+      "id": "bench_3",
+      "type": "metal_bench",
+      "position_norm": [
+        -0.4,
+        -0.8,
+        -0.75
+      ],
+      "size_class": "medium",
+      "physics": {
+        "collision": "box",
+        "material": "metal",
+        "rigid": true
+      }
+    },
+    {
+      "id": "perimeter_fence",
+      "type": "chain_link_fence_enclosing_court",
+      "position_norm": [
+        0.0,
+        -0.2,
+        0.05
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "mesh",
+        "material": "metal",
+        "rigid": true
+      }
+    },
+    {
+      "id": "light_pole",
+      "type": "tall_light_pole_with_floodlights",
+      "position_norm": [
+        -0.05,
+        0.35,
+        0.15
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "mesh",
+        "material": "metal",
+        "rigid": true
+      }
+    },
+    {
+      "id": "sky",
+      "type": "clear_blue_sky_with_sparse_clouds",
+      "position_norm": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "none",
+        "material": "none",
+        "rigid": false
+      }
+    }
+  ],
+  "relations": [
+    {
+      "subject": "basketball",
+      "object": "court_surface",
+      "relation": "on"
+    },
+    {
+      "subject": "hoop_north",
+      "object": "court_surface",
+      "relation": "above"
+    },
+    {
+      "subject": "hoop_south",
+      "object": "court_surface",
+      "relation": "above"
+    },
+    {
+      "subject": "hoop_north",
+      "object": "hoop_south",
+      "relation": "facing"
+    },
+    {
+      "subject": "bench_1",
+      "object": "court_surface",
+      "relation": "next_to"
+    },
+    {
+      "subject": "bench_2",
+      "object": "court_surface",
+      "relation": "next_to"
+    },
+    {
+      "subject": "bench_3",
+      "object": "court_surface",
+      "relation": "next_to"
+    },
+    {
+      "subject": "court_surface",
+      "object": "perimeter_fence",
+      "relation": "inside"
+    },
+    {
+      "subject": "sky",
+      "object": "court_surface",
+      "relation": "above"
+    }
+  ],
+  "hierarchy": {
+    "root": "outdoor_basketball_court",
+    "children": [
+      "court_surface",
+      "basketball",
+      "hoop_north",
+      "hoop_south",
+      "bench_1",
+      "bench_2",
+      "bench_3",
+      "perimeter_fence",
+      "light_pole",
+      "sky"
+    ]
+  }
+}

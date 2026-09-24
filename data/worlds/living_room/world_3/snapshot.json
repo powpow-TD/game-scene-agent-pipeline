@@ -1,0 +1,348 @@
+{
+  "scene": "modern_living_room",
+  "objects": [
+    {
+      "id": "sectional_sofa",
+      "type": "curved sectional sofa",
+      "position": [
+        0.13816463947296143,
+        -0.30623139441013336,
+        -0.3172828316688538
+      ],
+      "position_norm": [
+        0.0,
+        -0.5,
+        0.15
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "mesh",
+        "material": "fabric",
+        "rigid": false
+      },
+      "confidence": 0.95,
+      "evidence": "both"
+    },
+    {
+      "id": "coffee_table",
+      "type": "wooden coffee table",
+      "position": [
+        0.13816463947296143,
+        -0.34534412771463396,
+        -1.548525023460388
+      ],
+      "position_norm": [
+        0.0,
+        -0.55,
+        -0.3
+      ],
+      "size_class": "medium",
+      "physics": {
+        "collision": "box",
+        "material": "wood",
+        "rigid": true
+      },
+      "confidence": 0.95,
+      "evidence": "both"
+    },
+    {
+      "id": "bookshelf_left",
+      "type": "built-in bookshelf cabinet",
+      "position": [
+        -0.8745032453536987,
+        0.12400867193937301,
+        -2.095743775367737
+      ],
+      "position_norm": [
+        -0.78,
+        0.05,
+        -0.5
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "box",
+        "material": "wood",
+        "rigid": true
+      },
+      "confidence": 0.9,
+      "evidence": "both"
+    },
+    {
+      "id": "bookshelf_right",
+      "type": "built-in bookshelf cabinet",
+      "position": [
+        1.1508325242996216,
+        0.12400867193937301,
+        -1.9589390873908996
+      ],
+      "position_norm": [
+        0.78,
+        0.05,
+        -0.45
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "box",
+        "material": "wood",
+        "rigid": true
+      },
+      "confidence": 0.9,
+      "evidence": "both"
+    },
+    {
+      "id": "television",
+      "type": "flat-screen TV",
+      "position": [
+        -0.66677649974823,
+        0.045783205330371855,
+        -1.8768562746047974
+      ],
+      "position_norm": [
+        -0.62,
+        -0.05,
+        -0.42
+      ],
+      "size_class": "medium",
+      "physics": {
+        "collision": "box",
+        "material": "glass",
+        "rigid": true
+      },
+      "confidence": 0.85,
+      "evidence": "image"
+    },
+    {
+      "id": "floor_lamp",
+      "type": "tall floor lamp",
+      "position": [
+        -0.22535716533660893,
+        0.045783205330371855,
+        -2.424075026512146
+      ],
+      "position_norm": [
+        -0.28,
+        -0.05,
+        -0.62
+      ],
+      "size_class": "medium",
+      "physics": {
+        "collision": "box",
+        "material": "metal",
+        "rigid": true
+      },
+      "confidence": 0.85,
+      "evidence": "both"
+    },
+    {
+      "id": "window",
+      "type": "large window",
+      "position": [
+        0.13816463947296143,
+        0.17876649856567384,
+        -3.326985967159271
+      ],
+      "position_norm": [
+        0.0,
+        0.12,
+        -0.95
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "none",
+        "material": "glass",
+        "rigid": true
+      },
+      "confidence": 0.9,
+      "evidence": "both"
+    },
+    {
+      "id": "curtains",
+      "type": "curtain panels",
+      "position": [
+        0.13816463947296143,
+        0.12400867193937301,
+        -3.190181279182434
+      ],
+      "position_norm": [
+        0.0,
+        0.05,
+        -0.9
+      ],
+      "size_class": "medium",
+      "physics": {
+        "collision": "none",
+        "material": "fabric",
+        "rigid": false
+      },
+      "confidence": 0.85,
+      "evidence": "both"
+    },
+    {
+      "id": "area_rug",
+      "type": "neutral-toned area rug",
+      "position": [
+        0.13816463947296143,
+        -0.47832742094993586,
+        -1.1381109595298766
+      ],
+      "position_norm": [
+        0.0,
+        -0.72,
+        -0.15
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "none",
+        "material": "fabric",
+        "rigid": false
+      },
+      "confidence": 0.8,
+      "evidence": "both"
+    },
+    {
+      "id": "wall_art_right",
+      "type": "framed wall artwork (three panels)",
+      "position": [
+        1.371542191505432,
+        0.2022341385483742,
+        -1.411720335483551
+      ],
+      "position_norm": [
+        0.95,
+        0.15,
+        -0.25
+      ],
+      "size_class": "small",
+      "physics": {
+        "collision": "box",
+        "material": "other",
+        "rigid": true
+      },
+      "confidence": 0.6,
+      "evidence": "image"
+    },
+    {
+      "id": "doorway_left",
+      "type": "arched doorway/opening",
+      "position": [
+        -1.0952129125595091,
+        0.08489593863487244,
+        -0.3172828316688538
+      ],
+      "position_norm": [
+        -0.95,
+        0.0,
+        0.15
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "none",
+        "material": "stone",
+        "rigid": true
+      },
+      "confidence": 0.5,
+      "evidence": "image"
+    }
+  ],
+  "relations": [
+    {
+      "subject": "coffee_table",
+      "object": "sectional_sofa",
+      "relation": "next_to"
+    },
+    {
+      "subject": "coffee_table",
+      "object": "area_rug",
+      "relation": "on"
+    },
+    {
+      "subject": "sectional_sofa",
+      "object": "coffee_table",
+      "relation": "facing"
+    },
+    {
+      "subject": "floor_lamp",
+      "object": "sectional_sofa",
+      "relation": "next_to"
+    },
+    {
+      "subject": "floor_lamp",
+      "object": "window",
+      "relation": "next_to"
+    },
+    {
+      "subject": "television",
+      "object": "bookshelf_left",
+      "relation": "inside"
+    },
+    {
+      "subject": "bookshelf_right",
+      "object": "window",
+      "relation": "next_to"
+    },
+    {
+      "subject": "curtains",
+      "object": "window",
+      "relation": "next_to"
+    },
+    {
+      "subject": "wall_art_right",
+      "object": "bookshelf_right",
+      "relation": "above"
+    },
+    {
+      "subject": "sectional_sofa",
+      "object": "area_rug",
+      "relation": "on"
+    }
+  ],
+  "hierarchy": {
+    "root": "modern_living_room",
+    "children": [
+      "sectional_sofa",
+      "coffee_table",
+      "bookshelf_left",
+      "bookshelf_right",
+      "television",
+      "floor_lamp",
+      "window",
+      "curtains",
+      "area_rug",
+      "wall_art_right",
+      "doorway_left"
+    ]
+  },
+  "lighting": {
+    "condition": "indoor",
+    "notes": "Warm ambient interior glow from shelf lighting and floor lamp; window shows dark night exterior."
+  },
+  "physics_missing": [],
+  "uncertain": [
+    "window_position_relative_to_sofa (caption says right of sofa, panorama shows it centered behind sofa)",
+    "floor_lamp_side (caption says left of sofa, image places it near window center-left)",
+    "exact_extent_of_curved_sofa_and_camera_center_offset",
+    "whether_wall_art_right_are_paintings_or_covered_windows"
+  ],
+  "provenance": {
+    "backend": "deepseek",
+    "model": "deepseek-flash",
+    "clamped_positions": 0,
+    "source_caption": true,
+    "source_pano": true
+  },
+  "_occupancy": {
+    "voxel_size": 1.0,
+    "occupied_voxels": 35,
+    "bounds_min": [
+      -1.1601275205612183,
+      -0.6973587274551392,
+      -3.4637906551361084
+    ],
+    "bounds_max": [
+      1.4364567995071411,
+      0.867150604724884,
+      2.008396863937378
+    ],
+    "total_faces": 70682
+  }
+}

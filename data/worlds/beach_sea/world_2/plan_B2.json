@@ -1,0 +1,212 @@
+{
+  "scene": "sandy_beach_coastline",
+  "objects": [
+    {
+      "id": "beach_sand",
+      "type": "sand beach",
+      "position_norm": [
+        0.0,
+        -0.75,
+        0.35
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "mesh",
+        "material": "sand",
+        "rigid": false
+      }
+    },
+    {
+      "id": "ocean_water",
+      "type": "ocean water",
+      "position_norm": [
+        -0.55,
+        -0.55,
+        -0.35
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "none",
+        "material": "water",
+        "rigid": false
+      }
+    },
+    {
+      "id": "shoreline_waves",
+      "type": "breaking waves / foam line",
+      "position_norm": [
+        -0.75,
+        -0.65,
+        0.15
+      ],
+      "size_class": "medium",
+      "physics": {
+        "collision": "none",
+        "material": "water",
+        "rigid": false
+      }
+    },
+    {
+      "id": "sand_dunes",
+      "type": "sand dune ridge",
+      "position_norm": [
+        0.05,
+        -0.35,
+        -0.75
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "mesh",
+        "material": "sand",
+        "rigid": false
+      }
+    },
+    {
+      "id": "dune_grass",
+      "type": "coastal dune grass",
+      "position_norm": [
+        0.05,
+        -0.2,
+        -0.78
+      ],
+      "size_class": "small",
+      "physics": {
+        "collision": "none",
+        "material": "other",
+        "rigid": false
+      }
+    },
+    {
+      "id": "shell_1",
+      "type": "seashell",
+      "position_norm": [
+        -0.15,
+        -0.88,
+        0.6
+      ],
+      "size_class": "small",
+      "physics": {
+        "collision": "mesh",
+        "material": "stone",
+        "rigid": true
+      }
+    },
+    {
+      "id": "shell_2",
+      "type": "seashell",
+      "position_norm": [
+        0.2,
+        -0.9,
+        0.45
+      ],
+      "size_class": "small",
+      "physics": {
+        "collision": "mesh",
+        "material": "stone",
+        "rigid": true
+      }
+    },
+    {
+      "id": "shell_3",
+      "type": "seashell",
+      "position_norm": [
+        -0.3,
+        -0.92,
+        0.8
+      ],
+      "size_class": "small",
+      "physics": {
+        "collision": "mesh",
+        "material": "stone",
+        "rigid": true
+      }
+    },
+    {
+      "id": "sky_dome",
+      "type": "sky",
+      "position_norm": [
+        0.0,
+        0.95,
+        -0.1
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "none",
+        "material": "other",
+        "rigid": false
+      }
+    },
+    {
+      "id": "sun_or_moon_light",
+      "type": "celestial light source",
+      "position_norm": [
+        -0.05,
+        0.85,
+        -0.35
+      ],
+      "size_class": "small",
+      "physics": {
+        "collision": "none",
+        "material": "other",
+        "rigid": false
+      }
+    }
+  ],
+  "relations": [
+    {
+      "subject": "shoreline_waves",
+      "object": "ocean_water",
+      "relation": "next_to"
+    },
+    {
+      "subject": "sand_dunes",
+      "object": "beach_sand",
+      "relation": "next_to"
+    },
+    {
+      "subject": "dune_grass",
+      "object": "sand_dunes",
+      "relation": "on"
+    },
+    {
+      "subject": "shell_1",
+      "object": "beach_sand",
+      "relation": "on"
+    },
+    {
+      "subject": "shell_2",
+      "object": "beach_sand",
+      "relation": "on"
+    },
+    {
+      "subject": "shell_3",
+      "object": "beach_sand",
+      "relation": "on"
+    },
+    {
+      "subject": "beach_sand",
+      "object": "ocean_water",
+      "relation": "next_to"
+    },
+    {
+      "subject": "sky_dome",
+      "object": "beach_sand",
+      "relation": "above"
+    }
+  ],
+  "hierarchy": {
+    "root": "sandy_beach_coastline",
+    "children": [
+      "beach_sand",
+      "ocean_water",
+      "shoreline_waves",
+      "sand_dunes",
+      "dune_grass",
+      "shell_1",
+      "shell_2",
+      "shell_3",
+      "sky_dome",
+      "sun_or_moon_light"
+    ]
+  }
+}

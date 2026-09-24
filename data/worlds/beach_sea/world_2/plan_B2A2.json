@@ -1,0 +1,248 @@
+{
+  "scene": "sandy_beach_coastline",
+  "objects": [
+    {
+      "id": "sand_terrain",
+      "type": "sand_ground",
+      "position_norm": [
+        0.0,
+        -0.5,
+        -0.2
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "box",
+        "material": "sand",
+        "rigid": true
+      }
+    },
+    {
+      "id": "ocean_water",
+      "type": "water_plane",
+      "position_norm": [
+        0.0,
+        -0.35,
+        0.9
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "none",
+        "material": "water",
+        "rigid": false
+      }
+    },
+    {
+      "id": "shoreline_wet_sand",
+      "type": "wet_sand_strip",
+      "position_norm": [
+        0.0,
+        -0.44,
+        0.55
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "box",
+        "material": "wet_sand",
+        "rigid": true
+      }
+    },
+    {
+      "id": "dune_ridge",
+      "type": "sand_dune",
+      "position_norm": [
+        -0.6,
+        -0.15,
+        -0.85
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "mesh",
+        "material": "sand",
+        "rigid": true
+      }
+    },
+    {
+      "id": "palm_tree",
+      "type": "palm_tree",
+      "position_norm": [
+        0.55,
+        -0.05,
+        -0.6
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "box",
+        "material": "wood",
+        "rigid": true
+      }
+    },
+    {
+      "id": "beach_umbrella",
+      "type": "beach_umbrella",
+      "position_norm": [
+        -0.45,
+        -0.2,
+        -0.25
+      ],
+      "size_class": "medium",
+      "physics": {
+        "collision": "box",
+        "material": "fabric",
+        "rigid": true
+      }
+    },
+    {
+      "id": "driftwood_log",
+      "type": "driftwood",
+      "position_norm": [
+        -0.25,
+        -0.4,
+        0.1
+      ],
+      "size_class": "medium",
+      "physics": {
+        "collision": "mesh",
+        "material": "wood",
+        "rigid": true
+      }
+    },
+    {
+      "id": "beach_rock_01",
+      "type": "rock",
+      "position_norm": [
+        0.15,
+        -0.4,
+        0.35
+      ],
+      "size_class": "small",
+      "physics": {
+        "collision": "mesh",
+        "material": "stone",
+        "rigid": true
+      }
+    },
+    {
+      "id": "beach_rock_02",
+      "type": "rock",
+      "position_norm": [
+        -0.75,
+        -0.35,
+        0.4
+      ],
+      "size_class": "medium",
+      "physics": {
+        "collision": "mesh",
+        "material": "stone",
+        "rigid": true
+      }
+    },
+    {
+      "id": "seashell_01",
+      "type": "seashell",
+      "position_norm": [
+        0.3,
+        -0.43,
+        0.5
+      ],
+      "size_class": "small",
+      "physics": {
+        "collision": "mesh",
+        "material": "shell",
+        "rigid": true
+      }
+    },
+    {
+      "id": "beach_grass_clump",
+      "type": "beach_grass",
+      "position_norm": [
+        -0.85,
+        -0.3,
+        -0.6
+      ],
+      "size_class": "small",
+      "physics": {
+        "collision": "none",
+        "material": "foliage",
+        "rigid": false
+      }
+    }
+  ],
+  "relations": [
+    {
+      "subject": "ocean_water",
+      "object": "sand_terrain",
+      "relation": "next_to"
+    },
+    {
+      "subject": "shoreline_wet_sand",
+      "object": "ocean_water",
+      "relation": "next_to"
+    },
+    {
+      "subject": "shoreline_wet_sand",
+      "object": "sand_terrain",
+      "relation": "on"
+    },
+    {
+      "subject": "dune_ridge",
+      "object": "sand_terrain",
+      "relation": "on"
+    },
+    {
+      "subject": "palm_tree",
+      "object": "sand_terrain",
+      "relation": "on"
+    },
+    {
+      "subject": "beach_umbrella",
+      "object": "sand_terrain",
+      "relation": "on"
+    },
+    {
+      "subject": "driftwood_log",
+      "object": "sand_terrain",
+      "relation": "on"
+    },
+    {
+      "subject": "beach_rock_01",
+      "object": "sand_terrain",
+      "relation": "on"
+    },
+    {
+      "subject": "beach_rock_02",
+      "object": "sand_terrain",
+      "relation": "on"
+    },
+    {
+      "subject": "seashell_01",
+      "object": "shoreline_wet_sand",
+      "relation": "on"
+    },
+    {
+      "subject": "beach_grass_clump",
+      "object": "dune_ridge",
+      "relation": "on"
+    },
+    {
+      "subject": "palm_tree",
+      "object": "ocean_water",
+      "relation": "facing"
+    }
+  ],
+  "hierarchy": {
+    "root": "sandy_beach_coastline",
+    "children": [
+      "sand_terrain",
+      "ocean_water",
+      "shoreline_wet_sand",
+      "dune_ridge",
+      "palm_tree",
+      "beach_umbrella",
+      "driftwood_log",
+      "beach_rock_01",
+      "beach_rock_02",
+      "seashell_01",
+      "beach_grass_clump"
+    ]
+  }
+}

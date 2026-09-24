@@ -1,0 +1,6 @@
+﻿seed,model,cond,before,after,drift,n_matched,ok
+0,deepseek-flash,B2,6,4,0.387,12,1
+0,deepseek-flash,B2A1,6,0,1.563,12,1
+1,deepseek-flash,B2,10,2,0.658,12,1
+1,deepseek-flash,B2A1,10,0,1.768,12,1
+2,deepseek-flash,B2,9,0,0.783,12,1

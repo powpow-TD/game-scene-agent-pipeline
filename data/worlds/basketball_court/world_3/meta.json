@@ -1,0 +1,23 @@
+{
+  "world_id": "be4bdd53-816e-4425-ac3b-63e8c860cc3e",
+  "model": "marble-1.1",
+  "prompt": "an outdoor basketball court with a basketball on the ground, hoops, benches, chain-link fence, clear sky with some clouds, bright daylight",
+  "caption": "The scene is an outdoor basketball court, rendered in a realistic style, capturing the vibrant energy of a sports facility under bright daylight. The overall tone is active and inviting, suggesting a perfect day for a game. The court surface is a smooth, hard material, likely asphalt or concrete, painted with clear white lines delineating the free-throw lanes, three-point arcs, and the center circle. A bright orange basketball rests on the ground near the center of the court, appearing ready for play. Two sturdy basketball hoops with white nets stand at opposite ends of the court, their backboards made of transparent material, framed by metal supports. Along the perimeter of the court, several metal benches are positioned, offering seating for players or spectators. A tall chain-link fence encloses the entire court, providing a secure boundary and preventing balls from straying too far. Beyond the fence, a clear blue sky stretches overhead, dotted with a few fluffy white clouds, indicating fair weather. The court is well-maintained, with no visible cracks or debris. The basketball hoops are firmly anchored, their metal poles rising vertically from the ground. The benches are arranged parallel to the sidelines, spaced evenly along the length of the court. The chain-link fence forms a continuous barrier around the playing area, with its posts regularly spaced. ",
+  "semantics": {
+    "metric_scale_factor": 2.7498908042907715,
+    "ground_plane_offset": 1.6031073331832886
+  },
+  "cost": {
+    "total_credits": 1580,
+    "line_items": [
+      {
+        "name": "Pano generation (text)",
+        "credits": 80
+      },
+      {
+        "name": "World generation",
+        "credits": 1500
+      }
+    ]
+  }
+}

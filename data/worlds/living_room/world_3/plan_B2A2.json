@@ -1,0 +1,259 @@
+{
+  "scene": "modern_living_room",
+  "objects": [
+    {
+      "id": "rug",
+      "type": "rug",
+      "position_norm": [
+        -0.05,
+        -0.97,
+        0.05
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "none",
+        "material": "fabric",
+        "rigid": false
+      }
+    },
+    {
+      "id": "sofa",
+      "type": "sofa",
+      "position_norm": [
+        0.0,
+        -0.65,
+        0.65
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "box",
+        "material": "fabric",
+        "rigid": true
+      }
+    },
+    {
+      "id": "coffee_table",
+      "type": "coffee_table",
+      "position_norm": [
+        0.0,
+        -0.82,
+        0.0
+      ],
+      "size_class": "medium",
+      "physics": {
+        "collision": "box",
+        "material": "wood",
+        "rigid": true
+      }
+    },
+    {
+      "id": "armchair",
+      "type": "armchair",
+      "position_norm": [
+        -0.65,
+        -0.67,
+        0.25
+      ],
+      "size_class": "medium",
+      "physics": {
+        "collision": "box",
+        "material": "fabric",
+        "rigid": true
+      }
+    },
+    {
+      "id": "side_table",
+      "type": "side_table",
+      "position_norm": [
+        -0.75,
+        -0.82,
+        0.65
+      ],
+      "size_class": "small",
+      "physics": {
+        "collision": "box",
+        "material": "wood",
+        "rigid": true
+      }
+    },
+    {
+      "id": "tv_stand",
+      "type": "tv_stand",
+      "position_norm": [
+        0.0,
+        -0.82,
+        -0.75
+      ],
+      "size_class": "medium",
+      "physics": {
+        "collision": "box",
+        "material": "wood",
+        "rigid": true
+      }
+    },
+    {
+      "id": "television",
+      "type": "television",
+      "position_norm": [
+        0.0,
+        -0.39,
+        -0.75
+      ],
+      "size_class": "medium",
+      "physics": {
+        "collision": "box",
+        "material": "glass",
+        "rigid": true
+      }
+    },
+    {
+      "id": "floor_lamp",
+      "type": "floor_lamp",
+      "position_norm": [
+        0.8,
+        -0.55,
+        0.55
+      ],
+      "size_class": "small",
+      "physics": {
+        "collision": "mesh",
+        "material": "metal",
+        "rigid": true
+      }
+    },
+    {
+      "id": "potted_plant",
+      "type": "potted_plant",
+      "position_norm": [
+        0.8,
+        -0.78,
+        -0.6
+      ],
+      "size_class": "small",
+      "physics": {
+        "collision": "mesh",
+        "material": "ceramic",
+        "rigid": true
+      }
+    },
+    {
+      "id": "bookshelf",
+      "type": "bookshelf",
+      "position_norm": [
+        -0.85,
+        -0.5,
+        -0.55
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "box",
+        "material": "wood",
+        "rigid": true
+      }
+    },
+    {
+      "id": "wall_art",
+      "type": "wall_art",
+      "position_norm": [
+        0.0,
+        0.25,
+        -0.98
+      ],
+      "size_class": "medium",
+      "physics": {
+        "collision": "none",
+        "material": "canvas",
+        "rigid": false
+      }
+    },
+    {
+      "id": "pendant_light",
+      "type": "pendant_light",
+      "position_norm": [
+        0.0,
+        0.65,
+        0.0
+      ],
+      "size_class": "small",
+      "physics": {
+        "collision": "none",
+        "material": "metal",
+        "rigid": false
+      }
+    }
+  ],
+  "relations": [
+    {
+      "subject": "coffee_table",
+      "object": "rug",
+      "relation": "on"
+    },
+    {
+      "subject": "sofa",
+      "object": "television",
+      "relation": "facing"
+    },
+    {
+      "subject": "armchair",
+      "object": "coffee_table",
+      "relation": "facing"
+    },
+    {
+      "subject": "side_table",
+      "object": "armchair",
+      "relation": "next_to"
+    },
+    {
+      "subject": "floor_lamp",
+      "object": "sofa",
+      "relation": "next_to"
+    },
+    {
+      "subject": "potted_plant",
+      "object": "tv_stand",
+      "relation": "next_to"
+    },
+    {
+      "subject": "bookshelf",
+      "object": "tv_stand",
+      "relation": "next_to"
+    },
+    {
+      "subject": "television",
+      "object": "tv_stand",
+      "relation": "on"
+    },
+    {
+      "subject": "wall_art",
+      "object": "television",
+      "relation": "above"
+    },
+    {
+      "subject": "pendant_light",
+      "object": "coffee_table",
+      "relation": "above"
+    },
+    {
+      "subject": "rug",
+      "object": "coffee_table",
+      "relation": "under"
+    }
+  ],
+  "hierarchy": {
+    "root": "modern_living_room",
+    "children": [
+      "rug",
+      "sofa",
+      "coffee_table",
+      "armchair",
+      "side_table",
+      "tv_stand",
+      "television",
+      "floor_lamp",
+      "potted_plant",
+      "bookshelf",
+      "wall_art",
+      "pendant_light"
+    ]
+  }
+}

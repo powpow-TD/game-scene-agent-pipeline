@@ -1,0 +1,241 @@
+{
+  "scene": "sandy_beach",
+  "objects": [
+    {
+      "id": "sand_beach",
+      "type": "sandy beach ground",
+      "position": [
+        -9.395544052124023,
+        -3.924844926595688,
+        14.61393928527832
+      ],
+      "position_norm": [
+        0.0,
+        -0.55,
+        0.25
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "mesh",
+        "material": "sand",
+        "rigid": true
+      },
+      "confidence": 0.98,
+      "evidence": "both"
+    },
+    {
+      "id": "ocean_water",
+      "type": "ocean water",
+      "position": [
+        -50.19990396499634,
+        -4.126583528518676,
+        -27.69305305480957
+      ],
+      "position_norm": [
+        -0.75,
+        -0.6,
+        -0.45
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "none",
+        "material": "water",
+        "rigid": false
+      },
+      "confidence": 0.96,
+      "evidence": "both"
+    },
+    {
+      "id": "shoreline_waves",
+      "type": "breaking wave with foam edge",
+      "position": [
+        -43.12714824676514,
+        -4.126583528518676,
+        -18.627268981933593
+      ],
+      "position_norm": [
+        -0.62,
+        -0.6,
+        -0.3
+      ],
+      "size_class": "medium",
+      "physics": {
+        "collision": "none",
+        "material": "water",
+        "rigid": false
+      },
+      "confidence": 0.9,
+      "evidence": "both"
+    },
+    {
+      "id": "sand_dunes",
+      "type": "sand dune ridge",
+      "position": [
+        -1.2346720695495605,
+        -0.6970272958278656,
+        -51.868477249145506
+      ],
+      "position_norm": [
+        0.15,
+        0.25,
+        -0.85
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "mesh",
+        "material": "sand",
+        "rigid": true
+      },
+      "confidence": 0.92,
+      "evidence": "both"
+    },
+    {
+      "id": "dune_grass",
+      "type": "sparse light-colored beach grass",
+      "position": [
+        -1.2346720695495605,
+        0.1099271118640901,
+        -51.868477249145506
+      ],
+      "position_norm": [
+        0.15,
+        0.45,
+        -0.85
+      ],
+      "size_class": "small",
+      "physics": {
+        "collision": "none",
+        "material": "other",
+        "rigid": false
+      },
+      "confidence": 0.72,
+      "evidence": "both"
+    },
+    {
+      "id": "scattered_shells",
+      "type": "seashells",
+      "position": [
+        -14.836125373840332,
+        -5.1352765381336205,
+        11.592011260986329
+      ],
+      "position_norm": [
+        -0.1,
+        -0.85,
+        0.2
+      ],
+      "size_class": "small",
+      "physics": {
+        "collision": "box",
+        "material": "stone",
+        "rigid": true
+      },
+      "confidence": 0.7,
+      "evidence": "both"
+    },
+    {
+      "id": "sky_dome",
+      "type": "sky",
+      "position": [
+        -9.395544052124023,
+        1.9255745291709903,
+        -0.4957008361816406
+      ],
+      "position_norm": [
+        0.0,
+        0.9,
+        0.0
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "none",
+        "material": null,
+        "rigid": false
+      },
+      "confidence": 0.95,
+      "evidence": "both"
+    }
+  ],
+  "relations": [
+    {
+      "subject": "sand_dunes",
+      "object": "sand_beach",
+      "relation": "next_to"
+    },
+    {
+      "subject": "dune_grass",
+      "object": "sand_dunes",
+      "relation": "on"
+    },
+    {
+      "subject": "shoreline_waves",
+      "object": "ocean_water",
+      "relation": "next_to"
+    },
+    {
+      "subject": "shoreline_waves",
+      "object": "sand_beach",
+      "relation": "next_to"
+    },
+    {
+      "subject": "scattered_shells",
+      "object": "sand_beach",
+      "relation": "on"
+    },
+    {
+      "subject": "ocean_water",
+      "object": "sand_beach",
+      "relation": "next_to"
+    },
+    {
+      "subject": "sky_dome",
+      "object": "sand_dunes",
+      "relation": "above"
+    }
+  ],
+  "hierarchy": {
+    "root": "sandy_beach",
+    "children": [
+      "sand_beach",
+      "ocean_water",
+      "shoreline_waves",
+      "sand_dunes",
+      "dune_grass",
+      "scattered_shells",
+      "sky_dome"
+    ]
+  },
+  "lighting": {
+    "condition": "sunny",
+    "notes": "Caption describes strong sunlight under a clear azure sky, but the rendered panorama is notably dim with a low, glaring light source (sun/moon) near the horizon; overall illumination reads as low-angle dusk/night rather than bright midday."
+  },
+  "physics_missing": [],
+  "uncertain": [
+    "lighting condition (caption says sunny/clear azure sky; image appears dark with a low glare source)",
+    "number and exact placement of scattered_shells",
+    "presence and density of dune_grass",
+    "exact extent and orientation of the ocean vs. dune horizon line"
+  ],
+  "provenance": {
+    "backend": "deepseek",
+    "model": "deepseek-flash",
+    "clamped_positions": 0,
+    "source_caption": true,
+    "source_pano": true
+  },
+  "_occupancy": {
+    "voxel_size": 1.0,
+    "occupied_voxels": 8600,
+    "bounds_min": [
+      -63.80135726928711,
+      -5.740492343902588,
+      -60.934261322021484
+    ],
+    "bounds_max": [
+      45.01026916503906,
+      2.3290517330169678,
+      59.9428596496582
+    ],
+    "total_faces": 77740
+  }
+}

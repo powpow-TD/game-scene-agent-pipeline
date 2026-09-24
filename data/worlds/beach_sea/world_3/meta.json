@@ -1,0 +1,23 @@
+{
+  "world_id": "4ce05862-bf2a-40dd-94d8-566ba718eaaf",
+  "model": "marble-1.1",
+  "prompt": "a sandy beach meeting the sea, with sand dunes, scattered shells, gentle waves, and strong sunlight, clear sky",
+  "caption": "The scene is a pristine sandy beach, rendered in a realistic style, bathed in the intense glow of strong sunlight under a clear, azure sky. The overall tone is one of serene natural beauty and tranquil warmth. The expansive sandy beach stretches across the foreground, its fine grains reflecting the bright sunlight. Gentle waves lap rhythmically at the shoreline, creating a delicate foamy edge where the water meets the land. Scattered across the sand are numerous shells of various sizes and colors, glistening under the sun. Behind the beach, a series of undulating sand dunes rise, their soft contours shaped by the wind. These dunes are sparsely covered with resilient, light-colored grasses that sway subtly in the imperceptible breeze. The clear sky above is a vibrant blue, devoid of clouds, enhancing the feeling of an idyllic, perfect day. The ocean extends outward, its surface shimmering with reflections of the sun, gradually deepening in color from a translucent turquoise near the shore to a richer blue further out. The sand dunes are positioned directly behind the beach, forming a natural barrier. The gentle waves break consistently along the entire length of the visible shoreline. The scattered shells are interspersed randomly across the sandy expanse, particularly near the water's edge. ",
+  "semantics": {
+    "metric_scale_factor": 0.8798688650131226,
+    "ground_plane_offset": 0.7973383069038391
+  },
+  "cost": {
+    "total_credits": 1580,
+    "line_items": [
+      {
+        "name": "Pano generation (text)",
+        "credits": 80
+      },
+      {
+        "name": "World generation",
+        "credits": 1500
+      }
+    ]
+  }
+}

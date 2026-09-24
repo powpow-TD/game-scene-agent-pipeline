@@ -1,0 +1,326 @@
+{
+  "scene": "sandy_beach",
+  "objects": [
+    {
+      "id": "beach_sand",
+      "type": "sand_ground",
+      "position_norm": [
+        0.0,
+        -0.5,
+        0.0
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "box",
+        "material": "sand",
+        "rigid": false
+      }
+    },
+    {
+      "id": "ocean_water",
+      "type": "water_plane",
+      "position_norm": [
+        0.0,
+        -0.42,
+        -0.85
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "none",
+        "material": "water",
+        "rigid": false
+      }
+    },
+    {
+      "id": "sky_dome",
+      "type": "sky_dome",
+      "position_norm": [
+        0.0,
+        0.9,
+        0.0
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "none",
+        "material": "sky",
+        "rigid": false
+      }
+    },
+    {
+      "id": "sun_disc",
+      "type": "sun",
+      "position_norm": [
+        0.65,
+        0.78,
+        -0.9
+      ],
+      "size_class": "small",
+      "physics": {
+        "collision": "none",
+        "material": "light",
+        "rigid": false
+      }
+    },
+    {
+      "id": "palm_trunk",
+      "type": "palm_tree_trunk",
+      "position_norm": [
+        -0.62,
+        0.1,
+        0.35
+      ],
+      "size_class": "medium",
+      "physics": {
+        "collision": "box",
+        "material": "wood",
+        "rigid": true
+      }
+    },
+    {
+      "id": "palm_fronds",
+      "type": "palm_fronds",
+      "position_norm": [
+        -0.62,
+        0.55,
+        0.35
+      ],
+      "size_class": "medium",
+      "physics": {
+        "collision": "none",
+        "material": "foliage",
+        "rigid": false
+      }
+    },
+    {
+      "id": "beach_umbrella",
+      "type": "beach_umbrella",
+      "position_norm": [
+        0.4,
+        0.05,
+        0.35
+      ],
+      "size_class": "medium",
+      "physics": {
+        "collision": "box",
+        "material": "fabric",
+        "rigid": true
+      }
+    },
+    {
+      "id": "beach_towel",
+      "type": "towel",
+      "position_norm": [
+        0.3,
+        -0.46,
+        0.55
+      ],
+      "size_class": "small",
+      "physics": {
+        "collision": "none",
+        "material": "fabric",
+        "rigid": false
+      }
+    },
+    {
+      "id": "beach_ball",
+      "type": "beach_ball",
+      "position_norm": [
+        0.06,
+        -0.4,
+        0.6
+      ],
+      "size_class": "small",
+      "physics": {
+        "collision": "mesh",
+        "material": "rubber",
+        "rigid": true
+      }
+    },
+    {
+      "id": "starfish",
+      "type": "starfish",
+      "position_norm": [
+        -0.32,
+        -0.47,
+        0.55
+      ],
+      "size_class": "small",
+      "physics": {
+        "collision": "none",
+        "material": "organic",
+        "rigid": false
+      }
+    },
+    {
+      "id": "seashell",
+      "type": "seashell",
+      "position_norm": [
+        0.6,
+        -0.47,
+        0.66
+      ],
+      "size_class": "small",
+      "physics": {
+        "collision": "none",
+        "material": "shell",
+        "rigid": false
+      }
+    },
+    {
+      "id": "driftwood",
+      "type": "driftwood_log",
+      "position_norm": [
+        -0.05,
+        -0.44,
+        0.72
+      ],
+      "size_class": "small",
+      "physics": {
+        "collision": "box",
+        "material": "wood",
+        "rigid": true
+      }
+    },
+    {
+      "id": "shore_rock",
+      "type": "rock",
+      "position_norm": [
+        0.8,
+        -0.36,
+        0.15
+      ],
+      "size_class": "medium",
+      "physics": {
+        "collision": "mesh",
+        "material": "stone",
+        "rigid": true
+      }
+    },
+    {
+      "id": "seagull",
+      "type": "bird",
+      "position_norm": [
+        -0.18,
+        0.42,
+        -0.35
+      ],
+      "size_class": "small",
+      "physics": {
+        "collision": "none",
+        "material": "feather",
+        "rigid": false
+      }
+    }
+  ],
+  "relations": [
+    {
+      "subject": "beach_sand",
+      "object": "ocean_water",
+      "relation": "next_to"
+    },
+    {
+      "subject": "ocean_water",
+      "object": "beach_sand",
+      "relation": "next_to"
+    },
+    {
+      "subject": "sky_dome",
+      "object": "beach_sand",
+      "relation": "above"
+    },
+    {
+      "subject": "sun_disc",
+      "object": "sky_dome",
+      "relation": "inside"
+    },
+    {
+      "subject": "palm_trunk",
+      "object": "beach_sand",
+      "relation": "on"
+    },
+    {
+      "subject": "palm_fronds",
+      "object": "palm_trunk",
+      "relation": "on"
+    },
+    {
+      "subject": "beach_umbrella",
+      "object": "beach_sand",
+      "relation": "on"
+    },
+    {
+      "subject": "beach_towel",
+      "object": "beach_sand",
+      "relation": "on"
+    },
+    {
+      "subject": "beach_towel",
+      "object": "beach_umbrella",
+      "relation": "under"
+    },
+    {
+      "subject": "beach_ball",
+      "object": "beach_towel",
+      "relation": "next_to"
+    },
+    {
+      "subject": "starfish",
+      "object": "beach_sand",
+      "relation": "on"
+    },
+    {
+      "subject": "seashell",
+      "object": "beach_sand",
+      "relation": "on"
+    },
+    {
+      "subject": "driftwood",
+      "object": "beach_sand",
+      "relation": "on"
+    },
+    {
+      "subject": "driftwood",
+      "object": "starfish",
+      "relation": "next_to"
+    },
+    {
+      "subject": "shore_rock",
+      "object": "beach_sand",
+      "relation": "on"
+    },
+    {
+      "subject": "shore_rock",
+      "object": "ocean_water",
+      "relation": "next_to"
+    },
+    {
+      "subject": "seagull",
+      "object": "ocean_water",
+      "relation": "above"
+    },
+    {
+      "subject": "palm_trunk",
+      "object": "shore_rock",
+      "relation": "next_to"
+    }
+  ],
+  "hierarchy": {
+    "root": "sandy_beach",
+    "children": [
+      "sky_dome",
+      "sun_disc",
+      "ocean_water",
+      "beach_sand",
+      "palm_trunk",
+      "palm_fronds",
+      "beach_umbrella",
+      "beach_towel",
+      "beach_ball",
+      "starfish",
+      "seashell",
+      "driftwood",
+      "shore_rock",
+      "seagull"
+    ]
+  }
+}

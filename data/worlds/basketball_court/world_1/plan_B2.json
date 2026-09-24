@@ -1,0 +1,247 @@
+{
+  "scene": "outdoor_basketball_court",
+  "objects": [
+    {
+      "id": "court_surface",
+      "type": "painted asphalt basketball court surface",
+      "position_norm": [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "box",
+        "material": "asphalt",
+        "rigid": true
+      }
+    },
+    {
+      "id": "basketball",
+      "type": "orange basketball",
+      "position_norm": [
+        -0.02,
+        -0.94,
+        -0.15
+      ],
+      "size_class": "small",
+      "physics": {
+        "collision": "mesh",
+        "material": "rubber",
+        "rigid": true
+      }
+    },
+    {
+      "id": "hoop_far",
+      "type": "basketball hoop with transparent backboard and pole",
+      "position_norm": [
+        0.0,
+        -0.6,
+        -0.85
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "mesh",
+        "material": "metal",
+        "rigid": true
+      }
+    },
+    {
+      "id": "hoop_near",
+      "type": "basketball hoop with transparent backboard and pole",
+      "position_norm": [
+        0.0,
+        -0.6,
+        0.85
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "mesh",
+        "material": "metal",
+        "rigid": true
+      }
+    },
+    {
+      "id": "bench_left",
+      "type": "metal bench",
+      "position_norm": [
+        -0.78,
+        -0.94,
+        -0.55
+      ],
+      "size_class": "medium",
+      "physics": {
+        "collision": "box",
+        "material": "metal",
+        "rigid": true
+      }
+    },
+    {
+      "id": "bench_right",
+      "type": "metal bench",
+      "position_norm": [
+        0.78,
+        -0.94,
+        -0.55
+      ],
+      "size_class": "medium",
+      "physics": {
+        "collision": "box",
+        "material": "metal",
+        "rigid": true
+      }
+    },
+    {
+      "id": "bench_side",
+      "type": "metal bench",
+      "position_norm": [
+        -0.35,
+        -0.94,
+        0.6
+      ],
+      "size_class": "medium",
+      "physics": {
+        "collision": "box",
+        "material": "metal",
+        "rigid": true
+      }
+    },
+    {
+      "id": "perimeter_fence",
+      "type": "chain-link fence enclosure with regularly spaced posts",
+      "position_norm": [
+        0.0,
+        -0.5,
+        0.0
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "mesh",
+        "material": "metal",
+        "rigid": true
+      }
+    },
+    {
+      "id": "floodlight_pole",
+      "type": "tall light pole with floodlight fixture",
+      "position_norm": [
+        0.08,
+        0.1,
+        -0.9
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "box",
+        "material": "metal",
+        "rigid": true
+      }
+    },
+    {
+      "id": "cloud",
+      "type": "white cloud",
+      "position_norm": [
+        -0.6,
+        0.75,
+        -0.5
+      ],
+      "size_class": "large",
+      "physics": {
+        "collision": "none",
+        "material": "water_vapor",
+        "rigid": false
+      }
+    }
+  ],
+  "relations": [
+    {
+      "subject": "basketball",
+      "object": "court_surface",
+      "relation": "on"
+    },
+    {
+      "subject": "hoop_far",
+      "object": "court_surface",
+      "relation": "on"
+    },
+    {
+      "subject": "hoop_near",
+      "object": "court_surface",
+      "relation": "on"
+    },
+    {
+      "subject": "hoop_far",
+      "object": "perimeter_fence",
+      "relation": "next_to"
+    },
+    {
+      "subject": "hoop_near",
+      "object": "perimeter_fence",
+      "relation": "next_to"
+    },
+    {
+      "subject": "bench_left",
+      "object": "court_surface",
+      "relation": "on"
+    },
+    {
+      "subject": "bench_right",
+      "object": "court_surface",
+      "relation": "on"
+    },
+    {
+      "subject": "bench_side",
+      "object": "court_surface",
+      "relation": "on"
+    },
+    {
+      "subject": "bench_left",
+      "object": "perimeter_fence",
+      "relation": "next_to"
+    },
+    {
+      "subject": "bench_right",
+      "object": "perimeter_fence",
+      "relation": "next_to"
+    },
+    {
+      "subject": "floodlight_pole",
+      "object": "perimeter_fence",
+      "relation": "next_to"
+    },
+    {
+      "subject": "court_surface",
+      "object": "perimeter_fence",
+      "relation": "inside"
+    },
+    {
+      "subject": "cloud",
+      "object": "perimeter_fence",
+      "relation": "above"
+    },
+    {
+      "subject": "hoop_far",
+      "object": "hoop_near",
+      "relation": "facing"
+    },
+    {
+      "subject": "bench_left",
+      "object": "court_surface",
+      "relation": "above"
+    }
+  ],
+  "hierarchy": {
+    "root": "outdoor_basketball_court",
+    "children": [
+      "court_surface",
+      "perimeter_fence",
+      "hoop_far",
+      "hoop_near",
+      "basketball",
+      "bench_left",
+      "bench_right",
+      "bench_side",
+      "floodlight_pole",
+      "cloud"
+    ]
+  }
+}
