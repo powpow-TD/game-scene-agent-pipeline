@@ -38,14 +38,16 @@ arrow(ax,(0.26,0.505),(0.38,0.52),color=OI["orange"],lw=1.5)
 arrow(ax,(0.26,0.225),(0.38,0.40),color=OI["purple"],lw=1.5,rad=0.12)
 
 # 输出快照
-box(ax,0.70,0.205,0.28,0.575,
+box(ax,0.740,0.205,0.240,0.575,
     "结构化全局状态快照\n\n{\n  scene: …\n  objects[]\n    {id, type,\n     position_norm,\n     physics}\n  relations[]\n  hierarchy\n  lighting\n  physics_missing[]\n}",
-    "#FFFFFF",fs=7.4,ec="black",linespacing=1.22)
-arrow(ax,(0.62,0.50),(0.70,0.50),color=OI["green"],lw=1.8)
-ax.text(0.66,0.535,"融合",fontsize=7.5,color=OI["green"],ha="center")
-# 回写（虚线走快照框正下方空白区，文字横排置于箭头下方，避免与箭头/快照框重叠）
-arrow(ax,(0.84,0.205),(0.84,0.115),color=OI["green"],lw=1.3,ls="--")
-ax.text(0.84,0.055,"UE5 场景图回读更新",fontsize=7.2,color=OI["green"],ha="center",va="center")
+    "#FFFFFF",fs=7.3,ec="black",linespacing=1.22)
+arrow(ax,(0.62,0.50),(0.740,0.50),color=OI["green"],lw=1.8)
+ax.text(0.680,0.535,"融合",fontsize=8.5,color=OI["green"],ha="center")
+# 回写回路：右→下→左，箭头指回输入侧，闭合"解析—回写—再接地"循环（原为悬空单箭头）
+ax.plot([0.860,0.860],[0.205,0.085],color=OI["green"],ls="--",lw=1.3,zorder=1)
+ax.add_patch(FancyArrowPatch((0.860,0.085),(0.30,0.085),arrowstyle="-|>",
+    mutation_scale=11,lw=1.3,color=OI["green"],linestyle="--",zorder=1))
+ax.text(0.58,0.122,"解析融合 · 状态回写为新的状态输入",fontsize=7.6,color=OI["green"],ha="center")
 
 plt.subplots_adjust(left=0.01,right=0.99,top=0.93,bottom=0.03)
 
