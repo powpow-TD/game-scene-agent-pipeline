@@ -114,9 +114,12 @@ handles = [
     Line2D([], [], color="grey", marker="o", linestyle="none", markersize=5,
            markeredgecolor="black", label="单个冻结世界（n=9/组）"),
 ]
-# 共享图例置于两幅面板下方（横排），避免遮挡数据点
+# 共享图例置于两幅面板下方（横排），避免遮挡数据点。
+# 关键：用 layout engine 在画布底部预留 11% 空间，图例锚定在画布内，
+#       否则 bbox_to_anchor 负值会把图例推到画布外被裁掉。
+fig.get_layout_engine().set(rect=(0.012, 0.112, 0.976, 0.862))
 fig.legend(handles=handles, fontsize=7.5, frameon=False, ncol=3,
-           loc="lower center", bbox_to_anchor=(0.5, -0.045),
+           loc="lower center", bbox_to_anchor=(0.5, 0.016),
            handletextpad=0.6, columnspacing=1.6)
 
 _qa(fig, "fig3"); _gray(fig, "fig3")
@@ -126,7 +129,8 @@ plt.close(fig)
 print("fig3 done（stripplot）")
 
 # ============================================================ 图 4 效应量
-fig, ax = plt.subplots(figsize=(5.0, 2.5), constrained_layout=True)
+fig, ax = plt.subplots(figsize=(5.2, 2.6), constrained_layout=True)   # 与图4同宽 132mm，保持整套风格一致
+fig.get_layout_engine().set(rect=(0.014, 0.026, 0.972, 0.948))
 mets = ["目标物体精度", "目标物体覆盖率"]
 ds = [cohen_d(vals("B2", "M2_precision"), vals("B2A2", "M2_precision")),
       cohen_d(vals("B2", "M2_recall"), vals("B2A2", "M2_recall"))]
@@ -153,6 +157,7 @@ print("fig4 done（lollipop）")
 
 # ============================================================ 图 5 任务依赖性
 fig, ax = plt.subplots(figsize=(5.2, 3.4), constrained_layout=True)
+fig.get_layout_engine().set(rect=(0.014, 0.024, 0.972, 0.952))
 scenes = ["living_room", "basketball_court", "beach_sea"]
 snames = ["室内客厅", "户外篮球场", "沙滩与大海"]
 rs = np.random.RandomState(7)
