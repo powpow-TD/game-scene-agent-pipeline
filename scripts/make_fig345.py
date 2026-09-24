@@ -44,13 +44,13 @@ def cohen_d(a, b):
     return (ma - mb) / s if s > 0 else 0.0
 
 
-def dot_strip(ax, groups, labels, colors, jitter=0.13, seed=42):
+def dot_strip(ax, groups, labels, colors, jitter=0.20, seed=42):
     """画 stripplot + 均值线 + 标准差须（P1 合规做法）"""
     rs = np.random.RandomState(seed)
     for i, (v, c) in enumerate(zip(groups, colors)):
         x = i + rs.uniform(-jitter, jitter, len(v))
-        ax.scatter(x, v, s=26, color=c, alpha=0.85, edgecolor="black",
-                   linewidth=0.45, zorder=3)
+        ax.scatter(x, v, s=20, color=c, alpha=0.9, edgecolor="black",
+                   linewidth=0.4, zorder=3)
         m, sd = st.mean(v), st.pstdev(v)
         ax.plot([i - 0.26, i + 0.26], [m, m], color="black", lw=2.0, zorder=5)
         ax.errorbar(i, m, yerr=sd, fmt="none", ecolor="black",
@@ -97,7 +97,7 @@ for ax, key, ylab in [(axes[0], "M2_recall", "目标物体覆盖率"),
     groups = [vals(c, key) for c in CONDS]
     dot_strip(ax, groups, LABELS, COLORS)
     ax.set_ylabel(ylab, fontsize=10)
-    ax.set_ylim(0, 1.18)
+    ax.set_ylim(0, 1.10)
     ax.grid(axis="y", ls=":", alpha=0.45, zorder=0)
     ax.set_axisbelow(True)
     for s in ["top", "right"]:
